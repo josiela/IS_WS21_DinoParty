@@ -8,34 +8,22 @@
 [ext_resource path="res://Graphics/dino-154909_640.png" type="Texture" id=6]
 [ext_resource path="res://Graphics/birthday-hat-vector-7.jpg" type="Texture" id=7]
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 4.48447, 4.66275 )
-
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1879.13, 114.618 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 6.05922, 10 )
 
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 155.982
-height = 120.19
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 10, 23.9284 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="PartyHat" type="StaticBody2D" parent="."]
 position = Vector2( -401.933, 304.073 )
 scale = Vector2( 0.107912, 0.848315 )
-
-[node name="Enemy2" type="Sprite" parent="PartyHat"]
-position = Vector2( 8868.85, 288.101 )
-scale = Vector2( 2.37968, 0.0834907 )
-texture = ExtResource( 7 )
-
-[node name="PartyHat" type="CollisionShape2D" parent="PartyHat"]
-position = Vector2( 8868.85, 288.101 )
-scale = Vector2( 44.733, 2.4365 )
-shape = SubResource( 4 )
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2( 781.456, 833.44 )
@@ -58,7 +46,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2( 3778.64, 4.37537 )
 scale = Vector2( 3.04034, 1 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Ralf" type="KinematicBody2D" parent="."]
 position = Vector2( 302.062, 626.495 )
@@ -69,13 +57,20 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Area2D" type="Area2D" parent="Ralf"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ralf/Area2D"]
+scale = Vector2( 26.2, 41.8 )
+shape = SubResource( 6 )
+
 [node name="Sprite" type="Sprite" parent="Ralf"]
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ralf"]
 position = Vector2( 58.4637, -6.74579 )
 scale = Vector2( 27.9112, 38.7103 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Ralf"]
 position = Vector2( 3713.58, -1304.9 )
@@ -87,11 +82,6 @@ drag_margin_v_enabled = true
 smoothing_enabled = true
 drag_margin_top = 0.63
 editor_draw_limits = true
-
-[node name="RayCast2D" type="RayCast2D" parent="Ralf"]
-position = Vector2( 473.232, 42.6978 )
-rotation = -1.5708
-scale = Vector2( 8.43179, 1.02667 )
 
 [node name="Timer" type="Timer" parent="Ralf"]
 one_shot = true
@@ -129,7 +119,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
 position = Vector2( 3828.76, 3.03086 )
 scale = Vector2( 3.04034, 1 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Floor3" type="StaticBody2D" parent="."]
 position = Vector2( -1232.62, 288.324 )
@@ -152,21 +142,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
 position = Vector2( 3828.76, 3.03086 )
 scale = Vector2( 3.04034, 1 )
-shape = SubResource( 1 )
-
-[node name="Enemy" type="StaticBody2D" parent="."]
-position = Vector2( -1181.73, 369.085 )
-scale = Vector2( 0.21577, 0.926686 )
-
-[node name="Enemy2" type="Sprite" parent="Enemy"]
-position = Vector2( 8868.85, 288.101 )
-scale = Vector2( 0.493355, 0.113905 )
-texture = ExtResource( 6 )
-
-[node name="Enemy3" type="CollisionShape2D" parent="Enemy"]
-position = Vector2( 8868.85, 288.101 )
-scale = Vector2( 0.493355, 0.113905 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="DyingText" type="Label" parent="."]
 visible = false
@@ -181,4 +157,49 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PartyHat1" type="Area2D" parent="."]
+position = Vector2( 528.117, 486.6 )
+scale = Vector2( 0.32, 0.16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PartyHat1"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PartyHat1"]
+scale = Vector2( 15.64, 9.92 )
+shape = SubResource( 5 )
+
+[node name="Enemy1" type="Area2D" parent="."]
+position = Vector2( 728.935, 637.641 )
+scale = Vector2( 0.127668, 0.109817 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Enemy1"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1"]
+scale = Vector2( 15.64, 9.92 )
+shape = SubResource( 5 )
+
+[node name="Enemy2" type="Area2D" parent="."]
+position = Vector2( 1275, 71.8722 )
+scale = Vector2( 0.406525, 0.156729 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Enemy2"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
+scale = Vector2( 15.64, 9.92 )
+shape = SubResource( 5 )
+
 [connection signal="timeout" from="Ralf/Timer" to="Ralf" method="_on_Timer_timeout"]
+[connection signal="area_entered" from="PartyHat1" to="Ralf" method="_on_PartyHat1_area_entered"]
+[connection signal="area_entered" from="Enemy1" to="Ralf" method="_on_Enemy1_area_entered"]
+[connection signal="area_entered" from="Enemy2" to="Ralf" method="_on_Enemy1_area_entered"]

@@ -27,8 +27,8 @@ var gravity= 90
 
 func _physics_process(delta):
 
-	if(lifespan>0):													#nur Wenn nicht tot
-		
+	if(lifespan>0):											#nur Wenn nicht tot
+	
 		movement = move_and_slide(movement, Vector2.UP)
 		movement.y = movement.y + gravity
 		
@@ -57,6 +57,7 @@ func _physics_process(delta):
 			print("aaa")
 			
 		if (is_on_floor()):
+			
 			isOnWall=false
 			
 		if (is_on_floor() && direction==-1):
@@ -64,18 +65,15 @@ func _physics_process(delta):
 			$Sprite.flip_h=false
 			
 			
-			#alles mit Leben und Sterben
-		if get_slide_count()>0:
+			#alles mit Leben und Sterben				#Codereste, falls man mal collision braucht die nicht durchgehbar sein soll
+	#	if get_slide_count()>0:
+	#		
+	#		for i in range(get_slide_count()):
+#
+#				
+#				if"Enemy" in get_slide_collision(i).collider.name:		#Zum sterben bzw lifespan verniedrigen
+#					_set_lifespan(-1)
 			
-			for i in range(get_slide_count()):
-				print(get_slide_collision(i).collider.name)				#DEBUG
-				
-				if"Enemy" in get_slide_collision(i).collider.name:		#Zum sterben bzw lifespan verniedrigen
-				
-					_set_lifespan(-1)
-				if"PartyHat" in get_slide_collision(i).collider.name:		#Zum sterben bzw lifespan verniedrigen
-					_set_lifespan(1)
-					print(lifespan)
 					
 		
 		
@@ -97,3 +95,13 @@ func _set_lifespan(variable):
 func _on_Timer_timeout():
 	print("timeout")
 	get_tree().change_scene("res://DeadMenue.tscn")
+
+
+func _on_PartyHat1_area_entered(area):
+	_set_lifespan(1)
+	print("The Hat is entered")
+
+
+
+func _on_Enemy1_area_entered(area):
+	_set_lifespan(-1)
