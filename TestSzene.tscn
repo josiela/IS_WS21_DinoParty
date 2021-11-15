@@ -8,15 +8,15 @@
 [ext_resource path="res://Graphics/dino-154909_640.png" type="Texture" id=6]
 [ext_resource path="res://Graphics/birthday-hat-vector-7.jpg" type="Texture" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1879.13, 114.618 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=2]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 6.05922, 10 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 23.9284 )
 
 [node name="Node2D" type="Node2D"]
@@ -46,7 +46,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2( 3778.64, 4.37537 )
 scale = Vector2( 3.04034, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Ralf" type="KinematicBody2D" parent="."]
 position = Vector2( 302.062, 626.495 )
@@ -58,11 +58,10 @@ __meta__ = {
 }
 
 [node name="Area2D" type="Area2D" parent="Ralf"]
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ralf/Area2D"]
 scale = Vector2( 26.2, 41.8 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Ralf"]
 texture = ExtResource( 1 )
@@ -119,7 +118,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
 position = Vector2( 3828.76, 3.03086 )
 scale = Vector2( 3.04034, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Floor3" type="StaticBody2D" parent="."]
 position = Vector2( -1232.62, 288.324 )
@@ -142,7 +141,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
 position = Vector2( 3828.76, 3.03086 )
 scale = Vector2( 3.04034, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="DyingText" type="Label" parent="."]
 visible = false
@@ -169,7 +168,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PartyHat1"]
 scale = Vector2( 15.64, 9.92 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="Enemy1" type="Area2D" parent="."]
 position = Vector2( 728.935, 637.641 )
@@ -183,7 +182,7 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1"]
 scale = Vector2( 15.64, 9.92 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="Enemy2" type="Area2D" parent="."]
 position = Vector2( 1275, 71.8722 )
@@ -197,7 +196,7 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
 scale = Vector2( 15.64, 9.92 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [connection signal="timeout" from="Ralf/Timer" to="Ralf" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="PartyHat1" to="Ralf" method="_on_PartyHat1_area_entered"]

@@ -8,8 +8,7 @@ onready var lifespan = 1 setget _set_lifespan
 
 
  #  Vars about movement
-onready var leftWallRaycast = $LefttRaycast2
-onready var rightWallRaycast= $RightRaycast
+
 var isOnWall : bool=false
 var direction= 1
 var wallJumpForce=500
@@ -20,7 +19,9 @@ var wall_slide_gravity = 10
 var movement= Vector2(300,0)
 const jumpforce= -1200
 
-
+# Vars about score
+var score=0
+var collectablesNumber
 # Vars about physics
 var gravity= 90
 
