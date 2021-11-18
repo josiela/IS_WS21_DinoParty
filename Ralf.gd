@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 signal lifespan_updated(lifespan)
-signal killed()
+signal ralf_died()
 # Vars about Life 
 onready var lifespan = 1 setget _set_lifespan
 
@@ -20,8 +20,7 @@ var movement= Vector2(300,0)
 const jumpforce= -1200
 
 # Vars about score
-var score=0
-var collectablesNumber
+
 # Vars about physics
 var gravity= 90
 
@@ -80,8 +79,10 @@ func _physics_process(delta):
 		
 	if(lifespan==0):
 		print("I DIED")
-		get_tree().change_scene("res://DeadMenue.tscn")
-		$Timer.start()
+	
+		emit_signal("ralf_died")
+		if Input.is_action_just_pressed("jump"):
+			get_tree().change_scene("res://TestSzene.tscn")
 			
 	
 
@@ -106,3 +107,7 @@ func _on_PartyHat1_area_entered(area):
 
 func _on_Enemy1_area_entered(area):
 	_set_lifespan(-1)
+
+
+func _on_PartyHat1_area_exited(area):
+	pass # Replace with function body.
