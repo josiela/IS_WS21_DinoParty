@@ -79,13 +79,12 @@ func _physics_process(delta):
 	if(lifespan==0):
 		#read score var from /Canvaslayer and give it to highscore
 		if setHighscore:
-			var canvasScript = load("res://scripts/CanvasLayer.gd").new()
-			var score = canvasScript.get("scoreEasy")
-			var highscore = load("res://scripts/highscore.gd").new()
+			var scoreCounter = get_node("/root/World/ScoreCounter/")
+			var score = scoreCounter.get("scoreEasy")
+			var highscore = get_node("/root/World")
 			highscore.setHighscore(score)
 			setHighscore = false
 			
-		print("I DIED")
 	
 		emit_signal("ralf_died")
 		if Input.is_action_just_pressed("jump"):

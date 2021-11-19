@@ -1,18 +1,19 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Graphics/Dino1.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Grass1.png" type="Texture" id=2]
-[ext_resource path="res://Ralf.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Ralf.gd" type="Script" id=3]
 [ext_resource path="res://Graphics/sky.jpg" type="Texture" id=4]
 [ext_resource path="res://Graphics/Disco-2.png" type="Texture" id=5]
 [ext_resource path="res://Graphics/dino-154909_640.png" type="Texture" id=6]
 [ext_resource path="res://Graphics/birthday-hat-vector-7.jpg" type="Texture" id=7]
-[ext_resource path="res://CanvasLayer.gd" type="Script" id=8]
-[ext_resource path="res://DeathText.gd" type="Script" id=9]
+[ext_resource path="res://scripts/highscore.gd" type="Script" id=8]
+[ext_resource path="res://scripts/DeathText.gd" type="Script" id=9]
 [ext_resource path="res://Graphics/Collectable1.png" type="Texture" id=10]
-[ext_resource path="res://PartyHat1.gd" type="Script" id=11]
-[ext_resource path="res://Collectable1.gd" type="Script" id=12]
-[ext_resource path="res://Collectable2.gd" type="Script" id=13]
+[ext_resource path="res://scripts/Collectable1.gd" type="Script" id=11]
+[ext_resource path="res://scripts/Collectable2.gd" type="Script" id=12]
+[ext_resource path="res://scripts/PartyHat1.gd" type="Script" id=13]
+[ext_resource path="res://scripts/CanvasLayer.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1879.13, 114.618 )
@@ -25,12 +26,13 @@ extents = Vector2( 6.05922, 10 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 5.08685, 11.7595 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 0, 0, 0 )
 
 [node name="World" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2( 781.456, 833.44 )
@@ -166,7 +168,7 @@ __meta__ = {
 [node name="PartyHat1" type="Area2D" parent="."]
 position = Vector2( 528.117, 486.6 )
 scale = Vector2( 0.32, 0.16 )
-script = ExtResource( 11 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -181,7 +183,7 @@ shape = SubResource( 4 )
 [node name="Collectable1" type="Area2D" parent="."]
 position = Vector2( 1458.72, 73.5505 )
 scale = Vector2( 0.32, 0.16 )
-script = ExtResource( 12 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -199,7 +201,7 @@ shape = SubResource( 4 )
 [node name="Collectable2" type="Area2D" parent="."]
 position = Vector2( 906.365, 502.964 )
 scale = Vector2( 0.32, 0.16 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -235,7 +237,7 @@ scale = Vector2( 1.31335, -0.821212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1/survivedArea"]
 position = Vector2( 107.824, -27.9736 )
 scale = Vector2( 10.7127, 27.5897 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Enemy2" type="Area2D" parent="."]
 position = Vector2( 1217.16, 89.6765 )
@@ -258,17 +260,17 @@ scale = Vector2( 1.31335, -0.821212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/survivedArea"]
 position = Vector2( 107.824, -27.9736 )
 scale = Vector2( 10.7127, 27.5897 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="ScoreCounter" type="CanvasLayer" parent="."]
-script = ExtResource( 8 )
+script = ExtResource( 14 )
 
 [node name="Panel" type="Panel" parent="ScoreCounter"]
 margin_left = 64.263
 margin_top = 75.7862
 margin_right = 271.263
 margin_bottom = 141.786
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -320,7 +322,7 @@ margin_left = 534.509
 margin_top = 312.607
 margin_right = 797.509
 margin_bottom = 405.607
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -341,10 +343,10 @@ __meta__ = {
 [connection signal="timeout" from="Ralf/Timer" to="Ralf" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="PartyHat1" to="Ralf" method="_on_PartyHat1_area_entered"]
 [connection signal="area_entered" from="PartyHat1" to="PartyHat1" method="_on_PartyHat1_area_entered"]
-[connection signal="area_entered" from="Collectable1" to="ScoreCounter" method="_on_Collectable1_area_entered"]
 [connection signal="area_entered" from="Collectable1" to="Collectable1" method="_on_Collectable1_area_entered"]
-[connection signal="area_entered" from="Collectable2" to="ScoreCounter" method="_on_Collectable1_area_entered"]
+[connection signal="area_entered" from="Collectable1" to="ScoreCounter" method="_on_Collectable1_area_entered"]
 [connection signal="area_entered" from="Collectable2" to="Collectable2" method="_on_Collectable2_area_entered"]
+[connection signal="area_entered" from="Collectable2" to="ScoreCounter" method="_on_Collectable1_area_entered"]
 [connection signal="area_entered" from="Enemy1" to="Ralf" method="_on_Enemy1_area_entered"]
 [connection signal="area_entered" from="Enemy1/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
 [connection signal="area_entered" from="Enemy2" to="Ralf" method="_on_Enemy1_area_entered"]

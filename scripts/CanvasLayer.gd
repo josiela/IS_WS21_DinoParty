@@ -10,15 +10,11 @@ func _ready():
 
 
 func _physics_process(delta):
-		if(isalive):
-			scoreEasy+=0.06
-		
-		$ScoreField.text= String(scoreEasy)
-		$CollectableField.text=String(collectables)
-
-
-
-
+	if(isalive):
+		scoreEasy+=0.06
+	
+	$ScoreField.text= String(scoreEasy)
+	$CollectableField.text=String(collectables)
 
 func _on_Ralf_ralf_died():
 	isalive=false
