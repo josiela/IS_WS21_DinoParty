@@ -5,6 +5,8 @@ signal ralf_died()
 # Vars about Life 
 onready var lifespan = 1 setget _set_lifespan
 
+onready var _animated_sprite = $AnimatedSprite
+
  #  Vars about movement
 
 var isOnWall : bool=false
@@ -30,6 +32,7 @@ func _physics_process(delta):
 	
 		movement = move_and_slide(movement, Vector2.UP)
 		movement.y = movement.y + gravity
+		_animated_sprite.play("Run")
 		
 		
 				
@@ -38,6 +41,7 @@ func _physics_process(delta):
 			if(is_on_floor()):
 				movement.y= jumpforce
 				print("jumped")
+				_animated_sprite.play("Stand")
 				
 			if(isOnWall):
 				
@@ -87,6 +91,7 @@ func _physics_process(delta):
 			
 	
 		emit_signal("ralf_died")
+		_animated_sprite.play("Hit")
 		if Input.is_action_just_pressed("jump"):
 			get_tree().change_scene("res://TestSzene.tscn")
 			
@@ -107,6 +112,7 @@ func _on_Timer_timeout():
 
 func _on_PartyHat1_area_entered(area):
 	_set_lifespan(1)
+	_animated_sprite.play("Hat")
 	print("The Hat is entered")
 
 

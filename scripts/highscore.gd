@@ -2,7 +2,7 @@ extends Node
 
 const SAVE_FILE_PATH = "user://savedata.save"
 
-var highscore
+var highscore = 0
 
 # Declare member variables here. Examples:
 # var a = 2
