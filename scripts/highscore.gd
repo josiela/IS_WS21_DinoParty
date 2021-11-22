@@ -9,6 +9,7 @@ var highscore
 # var b = "text"
 func _ready():
 	self.load_highscore()
+	$ScoreCounter/highscore.text= "Highscore: " + String(highscore)
 
 func setHighscore(score):
 	if score > self.highscore:

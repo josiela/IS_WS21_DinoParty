@@ -1,21 +1,23 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Graphics/sky.jpg" type="Texture" id=1]
-[ext_resource path="res://DeadMenue.gd" type="Script" id=2]
+[ext_resource path="res://scripts/DeadMenue.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 643.422, 360.317 )
+position = Vector2( 602.465, 378.291 )
 scale = Vector2( 2.04154, 2.27908 )
 texture = ExtResource( 1 )
+offset = Vector2( 20.0618, -7.88666 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 562.228
 margin_top = 331.626
 margin_right = 799.228
 margin_bottom = 362.626
+rect_pivot_offset = Vector2( 58.3296, 13.9885 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "				  				 Oh No!
 Maby i'll be in time for the next party"
@@ -26,6 +28,18 @@ __meta__ = {
 [node name="Label2" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="highscore" type="Label" parent="."]
+margin_left = 625.0
+margin_top = 390.0
+margin_right = 703.0
+margin_bottom = 421.0
+rect_pivot_offset = Vector2( 58.3296, 13.9885 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Highscore"
 __meta__ = {
 "_edit_use_anchors_": false
 }

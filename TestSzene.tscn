@@ -28,7 +28,7 @@ extents = Vector2( 5.08685, 11.7595 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0, 0, 0, 0 )
 
 [node name="World" type="Node2D"]
@@ -95,7 +95,7 @@ editor_draw_limits = true
 one_shot = true
 
 [node name="Sky" type="Sprite" parent="."]
-position = Vector2( 805.364, 260.632 )
+position = Vector2( 805.905, 260.091 )
 scale = Vector2( 4.78165, 2.60072 )
 z_index = -1
 texture = ExtResource( 4 )
@@ -270,7 +270,7 @@ margin_left = 64.263
 margin_top = 75.7862
 margin_right = 271.263
 margin_bottom = 141.786
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -314,6 +314,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="highscore" type="Label" parent="ScoreCounter"]
+margin_left = 192.917
+margin_top = 121.377
+margin_right = 274.917
+margin_bottom = 141.377
+rect_pivot_offset = Vector2( 58.3296, 13.9885 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Highscore"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="DeathText" type="CanvasLayer" parent="."]
 script = ExtResource( 9 )
 
@@ -322,7 +334,7 @@ margin_left = 534.509
 margin_top = 312.607
 margin_right = 797.509
 margin_bottom = 405.607
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
