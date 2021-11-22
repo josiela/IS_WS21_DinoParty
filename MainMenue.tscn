@@ -10,7 +10,7 @@ func _process(delta):
 		get_tree().change_scene(\"res://TestSzene.tscn\")
 "
 
-[sub_resource type="StreamTexture" id=24]
+[sub_resource type="StreamTexture" id=2]
 flags = 4
 load_path = "res://.import/SkyBackgroundGradient.png-43096ed909686f1ea285d34e789968a5.stex"
 
@@ -27,47 +27,47 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 878.952, 502.034 )
 scale = Vector2( 2.79403, 3.18462 )
-texture = SubResource( 24 )
+texture = SubResource( 2 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1769.0
 margin_bottom = 980.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 846.0
-margin_top = 486.0
-margin_right = 923.0
-margin_bottom = 494.0
+margin_left = 653.0
+margin_top = 471.0
+margin_right = 1115.0
+margin_bottom = 509.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 77.0
-margin_bottom = 2.0
+margin_right = 462.0
+margin_bottom = 17.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_right = 77.0
-margin_bottom = 2.0
+margin_right = 462.0
+margin_bottom = 17.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Oh sh*t ! I'm 66 milion years late for that party. I really need to hurry now"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 6.0
-margin_right = 77.0
-margin_bottom = 8.0
+margin_top = 21.0
+margin_right = 462.0
+margin_bottom = 38.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
-margin_left = 27.0
-margin_right = 50.0
-margin_bottom = 2.0
+margin_left = 162.0
+margin_right = 300.0
+margin_bottom = 17.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_right = 23.0
-margin_bottom = 2.0
+margin_right = 138.0
+margin_bottom = 17.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
-margin_right = 23.0
-margin_bottom = 2.0
+margin_right = 138.0
+margin_bottom = 17.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )

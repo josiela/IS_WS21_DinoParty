@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 signal lifespan_updated(lifespan)
 signal ralf_died()
+signal dontUpdateScorePlease()
+signal updateScorePlease()
 # Vars about Life 
 onready var lifespan = 1 setget _set_lifespan
 
@@ -17,16 +19,27 @@ var wall_slide_speed= 10
 var wall_slide_gravity = 10
 var setHighscore = true
 
-var movement= Vector2(300,0)
+var movement= Vector2(500,0)
 const jumpforce= -1200
 
 # Vars about score
-
+var oldX=302.062012
 # Vars about physics
 var gravity= 90
 
 
 func _physics_process(delta):
+	
+	var koords=get_position()
+	
+	if(koords.x==oldX):
+		print("Jo ich stehe")
+		emit_signal("dontUpdateScorePlease")
+	else:
+		emit_signal("updateScorePlease")
+	oldX=koords.x
+	
+	
 
 	if(lifespan>0):											#nur Wenn nicht tot
 	
@@ -40,7 +53,6 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump"):
 			if(is_on_floor()):
 				movement.y= jumpforce
-				print("jumped")
 				_animated_sprite.play("Stand")
 				
 			if(isOnWall):
@@ -123,3 +135,7 @@ func _on_Enemy1_area_entered(area):
 
 func _on_PartyHat1_area_exited(area):
 	pass # Replace with function body.
+
+
+func _on_FallingDeathZone_area_entered(area):
+	_set_lifespan(-2)

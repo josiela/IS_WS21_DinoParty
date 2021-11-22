@@ -3,6 +3,7 @@ extends CanvasLayer
 var scoreEasy= 0;
 var collectables=0;
 var isalive=true;
+var updateScore=true
 
 func _ready():
 	$ScoreField.text= String(scoreEasy)
@@ -10,7 +11,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	if(isalive):
+	if(isalive and updateScore):
 		scoreEasy+=0.06
 	
 	$ScoreField.text= String(scoreEasy)
@@ -27,3 +28,11 @@ func _on_survivedArea_area_entered(area):
 func _on_Collectable1_area_entered(area):
 
 	collectables+=1;
+
+
+func _on_Ralf_dontUpdateScorePlease():
+	updateScore=false
+
+
+func _on_Ralf_updateScorePlease():
+	updateScore=true
