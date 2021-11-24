@@ -9,6 +9,8 @@ onready var lifespan = 1 setget _set_lifespan
 
 onready var _animated_sprite = $AnimatedSprite
 
+export (String, FILE) var endScreen_path = ""
+
  #  Vars about movement
 
 var isOnWall : bool=false
@@ -139,3 +141,9 @@ func _on_PartyHat1_area_exited(area):
 
 func _on_FallingDeathZone_area_entered(area):
 	_set_lifespan(-2)
+
+
+func _on_Area2D_area_entered(area):
+	if get_tree().change_scene(endScreen_path) != OK:
+		# Error handling
+		print("Error: Unavailable endszene")
