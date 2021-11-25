@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Graphics/Dino1.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Grass1.png" type="Texture" id=2]
@@ -19,9 +19,6 @@
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=17]
 [ext_resource path="res://scripts/Disco.gd" type="Script" id=18]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1895.44, 241.638 )
-
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2075.64, 234.652 )
 
@@ -29,13 +26,15 @@ extents = Vector2( 2075.64, 234.652 )
 extents = Vector2( 2200.53, 245.296 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 1945.28, 234.954 )
+extents = Vector2( 1876.57, 234.954 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 294.773, 11.8925 )
+extents = Vector2( 287.238, 130.559 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 1841.11, 237.313 )
+
+[sub_resource type="RectangleShape2D" id=29]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -55,11 +54,11 @@ region = Rect2( 374, 0, 187, 250 )
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 187, 250 )
+region = Rect2( 561, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 15 )
+atlas = ExtResource( 16 )
 region = Rect2( 561, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=13]
@@ -75,11 +74,11 @@ region = Rect2( 374, 0, 187, 250 )
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 250 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 16 )
+atlas = ExtResource( 15 )
 region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="SpriteFrames" id=17]
@@ -91,12 +90,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 11 ) ],
 "loop": true,
-"name": "Stand",
+"name": "Hit",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 12 ) ],
 "loop": true,
-"name": "Hit",
+"name": "Hat_Hit",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ) ],
@@ -106,12 +105,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 15 ) ],
 "loop": true,
-"name": "Hat_Hit",
+"name": "Stand_Hat",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 16 ) ],
 "loop": true,
-"name": "Stand_Hat",
+"name": "Stand",
 "speed": 5.0
 } ]
 
@@ -130,10 +129,16 @@ extents = Vector2( 5.08685, 11.7595 )
 bg_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 1897.31, 292.997 )
+extents = Vector2( 2382.42, 1391.44 )
 
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 1964.62, 113.943 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 537.121, 422.921 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 541.754, 624.183 )
 
 [sub_resource type="StreamTexture" id=25]
 flags = 4
@@ -153,38 +158,37 @@ __meta__ = {
 position = Vector2( 502.382, 844.448 )
 scale = Vector2( 0.891697, 1.45122 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="Sprite8" type="Sprite" parent="Floor"]
-position = Vector2( 10449.8, -6.7298 )
-scale = Vector2( 0.77862, 0.452939 )
+[node name="Sprite10" type="Sprite" parent="Floor"]
+position = Vector2( 10160.5, -488.046 )
+scale = Vector2( 0.100136, 0.8642 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 10449.8, -6.7298 )
-scale = Vector2( 0.77862, 0.452939 )
-shape = SubResource( 1 )
-
 [node name="Sprite7" type="Sprite" parent="Floor"]
-position = Vector2( 7914.66, -10.9209 )
+position = Vector2( 7934.8, -261.522 )
 scale = Vector2( 0.487756, 0.452939 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 6427.75, -14.1714 )
+position = Vector2( 6447.89, -264.773 )
 scale = Vector2( 0.0444357, 0.450395 )
 z_index = 10
 shape = SubResource( 2 )
 
 [node name="Sprite5" type="Sprite" parent="Floor"]
-position = Vector2( 6752.06, -8.39386 )
+position = Vector2( 6772.2, -258.995 )
+scale = Vector2( 0.0516842, 0.450395 )
+texture = ExtResource( 2 )
+
+[node name="Sprite9" type="Sprite" parent="Floor"]
+position = Vector2( 6446.42, -262.277 )
 scale = Vector2( 0.0516842, 0.450395 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 6751.59, -10.3698 )
+position = Vector2( 6771.73, -260.971 )
 scale = Vector2( 0.0444357, 0.450395 )
 shape = SubResource( 3 )
 
@@ -197,47 +201,56 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 7913.55, -13.7059 )
+position = Vector2( 7933.69, -264.307 )
 rotation = 1.64369e-13
 scale = Vector2( 0.476605, 0.452939 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 1000, 0 )
+position = Vector2( 957.275, 1190.1 )
 scale = Vector2( 10, 10 )
 z_index = 10
 shape = SubResource( 5 )
 
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Floor"]
+position = Vector2( 12870.2, -656.454 )
+scale = Vector2( 10.0594, 2.71068 )
+z_index = 10
+shape = SubResource( 5 )
+
 [node name="Sprite" type="Sprite" parent="Floor"]
-position = Vector2( 0, -12.0763 )
+position = Vector2( 40.3267, -16.2059 )
 scale = Vector2( 1, 0.431679 )
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="Floor"]
-position = Vector2( 2921.79, -11.5452 )
+position = Vector2( 2889.22, -10.167 )
 rotation = 3.14159
-scale = Vector2( 0.538381, -0.443809 )
+scale = Vector2( 0.521232, -0.443809 )
 texture = ExtResource( 2 )
 
 [node name="Sprite3" type="Sprite" parent="Floor"]
-position = Vector2( 4980.92, -12.7269 )
+position = Vector2( 5001.06, -263.328 )
 scale = Vector2( 0.476604, 0.452939 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 4980.93, -12.7269 )
+position = Vector2( 5001.07, -263.328 )
 scale = Vector2( 0.476605, 0.452939 )
 shape = SubResource( 4 )
 
 [node name="Sprite4" type="Sprite" parent="Floor"]
-position = Vector2( 6114.75, -7.76031 )
+position = Vector2( 6134.89, -258.362 )
 scale = Vector2( 0.0444357, 0.450395 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 6111.96, -9.02081 )
+position = Vector2( 6132.1, -259.622 )
 scale = Vector2( 0.0444357, 0.450395 )
 shape = SubResource( 6 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Floor"]
+shape = SubResource( 29 )
 
 [node name="Ralf" type="KinematicBody2D" parent="."]
 position = Vector2( 302.062, 626.495 )
@@ -286,23 +299,34 @@ animation = "Hit"
 playing = true
 offset = Vector2( 0, -15 )
 
+[node name="RightWall" type="RayCast2D" parent="Ralf"]
+position = Vector2( 116.541, 21.1904 )
+rotation = -1.5716
+scale = Vector2( 32.8403, 6.28752 )
+enabled = true
+
+[node name="LeftWall" type="RayCast2D" parent="Ralf"]
+position = Vector2( -58.2703, 42.3799 )
+rotation = 1.5708
+scale = Vector2( 32.8403, 6.28752 )
+enabled = true
+
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 10228.9, 355.719 )
+position = Vector2( 10435.6, -29.1493 )
 scale = Vector2( 1.79124, 2.82024 )
 collision_layer = 130
 script = ExtResource( 18 )
 endScreen_path = "res://EndScreen.tscn"
 
 [node name="Disco" type="Sprite" parent="Area2D"]
-scale = Vector2( 1, 1 )
+position = Vector2( 464.719, -339.757 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0.706543, 74.0885 )
-scale = Vector2( 1, 1 )
+position = Vector2( 454.069, -266.986 )
 z_index = 1
 shape = SubResource( 18 )
 
@@ -369,7 +393,7 @@ __meta__ = {
 }
 
 [node name="PartyHat1" type="Area2D" parent="."]
-position = Vector2( 2312.37, 638.13 )
+position = Vector2( 4821.6, 157.137 )
 scale = Vector2( 0.32, 0.16 )
 script = ExtResource( 13 )
 __meta__ = {
@@ -384,7 +408,7 @@ scale = Vector2( 15.64, 9.92 )
 shape = SubResource( 20 )
 
 [node name="PartyHat2" type="Area2D" parent="."]
-position = Vector2( 7015.45, 587.757 )
+position = Vector2( 7222.14, 202.889 )
 scale = Vector2( 0.32, 0.16 )
 script = ExtResource( 13 )
 __meta__ = {
@@ -398,8 +422,23 @@ texture = ExtResource( 7 )
 scale = Vector2( 15.64, 9.92 )
 shape = SubResource( 20 )
 
+[node name="PartyHat3" type="Area2D" parent="."]
+position = Vector2( 9604.4, -750.373 )
+scale = Vector2( 0.32, 0.16 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PartyHat3"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PartyHat3"]
+scale = Vector2( 15.64, 9.92 )
+shape = SubResource( 20 )
+
 [node name="Collectable1" type="Area2D" parent="."]
-position = Vector2( 8552.58, 350.861 )
+position = Vector2( 8759.27, -34.0073 )
 scale = Vector2( 0.32, 0.16 )
 collision_layer = 8
 script = ExtResource( 11 )
@@ -418,7 +457,7 @@ scale = Vector2( 15.64, 9.92 )
 shape = SubResource( 20 )
 
 [node name="Collectable2" type="Area2D" parent="."]
-position = Vector2( 1626.04, 533.131 )
+position = Vector2( 1319.95, 543.222 )
 scale = Vector2( 0.32, 0.16 )
 script = ExtResource( 12 )
 __meta__ = {
@@ -436,7 +475,7 @@ scale = Vector2( 15.64, 9.92 )
 shape = SubResource( 20 )
 
 [node name="Enemy1" type="Area2D" parent="."]
-position = Vector2( 696.743, 640.763 )
+position = Vector2( 1763.29, 632.659 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -459,7 +498,7 @@ scale = Vector2( 10.7127, 27.5897 )
 shape = SubResource( 21 )
 
 [node name="Enemy2" type="Area2D" parent="."]
-position = Vector2( 1267.97, 640.053 )
+position = Vector2( 3029.26, 303.573 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -485,20 +524,20 @@ shape = SubResource( 21 )
 script = ExtResource( 14 )
 
 [node name="Panel" type="Panel" parent="ScoreCounter"]
-margin_left = 64.263
-margin_top = 75.7862
-margin_right = 271.263
-margin_bottom = 141.786
+margin_left = 56.263
+margin_top = 7.7862
+margin_right = 263.263
+margin_bottom = 73.786
 custom_styles/panel = SubResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScoreField" type="Label" parent="ScoreCounter"]
-margin_left = 76.2943
-margin_top = 95.5378
-margin_right = 262.294
-margin_bottom = 129.538
+margin_left = 64.2943
+margin_top = 75.5378
+margin_right = 354.294
+margin_bottom = 109.538
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Hier sollte dein Score stehen"
@@ -507,10 +546,10 @@ __meta__ = {
 }
 
 [node name="CollectableField" type="Label" parent="ScoreCounter"]
-margin_left = 128.154
-margin_top = 121.139
-margin_right = 314.154
-margin_bottom = 155.139
+margin_left = 122.042
+margin_top = 49.2869
+margin_right = 402.042
+margin_bottom = 102.287
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Hier sind deine Collectables
@@ -520,15 +559,15 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="ScoreCounter"]
-position = Vector2( 87.3141, 130.137 )
+position = Vector2( 82.3141, 58.2848 )
 scale = Vector2( 0.0257352, 0.0323803 )
 texture = ExtResource( 10 )
 
 [node name="x" type="Label" parent="ScoreCounter"]
-margin_left = 112.832
-margin_top = 120.736
-margin_right = 298.832
-margin_bottom = 154.736
+margin_left = 102.944
+margin_top = 45.9961
+margin_right = 288.944
+margin_bottom = 79.9961
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "x"
@@ -537,10 +576,10 @@ __meta__ = {
 }
 
 [node name="highscore" type="Label" parent="ScoreCounter"]
-margin_left = 190.213
-margin_top = 120.836
-margin_right = 272.213
-margin_bottom = 140.836
+margin_left = 64.0042
+margin_top = 99.8921
+margin_right = 154.004
+margin_bottom = 124.892
 rect_pivot_offset = Vector2( 58.3296, 13.9885 )
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -578,72 +617,126 @@ position = Vector2( 1458.72, 73.5505 )
 scale = Vector2( 0.32, 0.16 )
 
 [node name="Sprite" type="Sprite" parent="Platforms"]
-position = Vector2( 1192.29, 3485.26 )
-scale = Vector2( 0.288695, 0.826017 )
+position = Vector2( -1136.28, 3562.81 )
+scale = Vector2( 0.369612, 1.20257 )
 texture = ExtResource( 2 )
+offset = Vector2( 762.515, 42.092 )
+
+[node name="Sprite6" type="Sprite" parent="Platforms"]
+position = Vector2( 5058.26, 1738.14 )
+scale = Vector2( 0.287312, 2.29461 )
+texture = ExtResource( 2 )
+offset = Vector2( 762.515, 42.092 )
+
+[node name="Sprite8" type="Sprite" parent="Platforms"]
+position = Vector2( 23595.4, -4658.7 )
+scale = Vector2( 0.287312, 1.51941 )
+texture = ExtResource( 2 )
+offset = Vector2( 5.87439, -317.185 )
+
+[node name="Sprite9" type="Sprite" parent="Platforms"]
+position = Vector2( 30245.1, 122.006 )
+scale = Vector2( 2.88046, 7.92651 )
+texture = ExtResource( 2 )
+offset = Vector2( 5.87439, -317.185 )
+
+[node name="Sprite10" type="Sprite" parent="Platforms"]
+position = Vector2( 23599.2, -3966.75 )
+scale = Vector2( 0.287312, 1.51941 )
+texture = ExtResource( 2 )
+offset = Vector2( 5.87439, -317.185 )
+
+[node name="Sprite12" type="Sprite" parent="Platforms"]
+position = Vector2( 23594.1, -2012.55 )
+scale = Vector2( 0.287312, 5.58487 )
+texture = ExtResource( 2 )
+offset = Vector2( 5.87439, -317.185 )
+
+[node name="Sprite5" type="Sprite" parent="Platforms"]
+position = Vector2( 6831.85, 2569.72 )
+scale = Vector2( 0.366506, 4.25434 )
+texture = ExtResource( 2 )
+offset = Vector2( 762.515, 42.092 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms"]
-position = Vector2( 1193.8, 3500.35 )
+position = Vector2( -829.9, 4472.96 )
+scale = Vector2( 0.288695, 0.826017 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 7114.55, 2799.34 )
 scale = Vector2( 0.288695, 0.826017 )
 shape = SubResource( 23 )
 
 [node name="Sprite2" type="Sprite" parent="Platforms"]
-position = Vector2( 19166.5, 3488.74 )
-scale = Vector2( 0.288695, 0.826017 )
+position = Vector2( 19954.4, 1083.31 )
+scale = Vector2( 0.363445, 0.826017 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Platforms"]
-position = Vector2( 20729.1, 2794.56 )
+position = Vector2( 21375, 389.131 )
 scale = Vector2( 0.288695, 0.424401 )
 shape = SubResource( 24 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Platforms"]
-position = Vector2( 22139.2, 2274.66 )
+position = Vector2( 22785.1, -130.766 )
 scale = Vector2( 0.288695, 0.424401 )
 shape = SubResource( 24 )
 
 [node name="Sprite4" type="Sprite" parent="Platforms"]
-position = Vector2( 22124.8, 2272.44 )
+position = Vector2( 22837.8, -25.8942 )
 scale = Vector2( 0.288695, 0.424401 )
 texture = ExtResource( 2 )
+offset = Vector2( -232.602, -252.338 )
+
+[node name="Sprite7" type="Sprite" parent="Platforms"]
+position = Vector2( 24306.6, -500.894 )
+scale = Vector2( 0.288695, 0.424401 )
+texture = ExtResource( 2 )
+offset = Vector2( -232.602, -252.338 )
 
 [node name="Sprite3" type="Sprite" parent="Platforms"]
-position = Vector2( 20711.3, 2870.61 )
+position = Vector2( 21357.2, 465.182 )
 scale = Vector2( 0.288695, 0.424401 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Platforms"]
-position = Vector2( 19168, 3503.83 )
+position = Vector2( 19964.6, 2061.24 )
 scale = Vector2( 0.288695, 0.826017 )
 shape = SubResource( 23 )
 
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 23590.2, -5098.53 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 23594, -2512.99 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 23591.2, -2941.74 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 23589.5, -4400.03 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 23595.1, -3670.6 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 24242.5, -272.285 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Platforms"]
+position = Vector2( 5284.14, 1859.75 )
+shape = SubResource( 28 )
+
 [node name="enemies" type="Node" parent="."]
 
-[node name="Enemy3" type="Area2D" parent="enemies"]
-position = Vector2( 1860.27, 565.657 )
-scale = Vector2( 0.127668, 0.109817 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="enemies/Enemy3"]
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy3"]
-scale = Vector2( 15.64, 9.92 )
-shape = SubResource( 20 )
-
-[node name="survivedArea" type="Area2D" parent="enemies/Enemy3"]
-position = Vector2( 349.09, -26.7998 )
-scale = Vector2( 1.31335, -0.821212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy3/survivedArea"]
-position = Vector2( 107.824, -27.9736 )
-scale = Vector2( 10.7127, 27.5897 )
-shape = SubResource( 21 )
-
 [node name="Enemy4" type="Area2D" parent="enemies"]
-position = Vector2( 2870.02, 641.881 )
+position = Vector2( 2426.03, 630.108 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -666,7 +759,7 @@ scale = Vector2( 10.7127, 27.5897 )
 shape = SubResource( 21 )
 
 [node name="Enemy5" type="Area2D" parent="enemies"]
-position = Vector2( 3751.54, 647.262 )
+position = Vector2( 4363.15, 272.458 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -689,7 +782,7 @@ scale = Vector2( 10.7127, 27.5897 )
 shape = SubResource( 21 )
 
 [node name="Enemy6" type="Area2D" parent="enemies"]
-position = Vector2( 4398.92, 644.834 )
+position = Vector2( 7816.38, 191.668 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -711,8 +804,31 @@ position = Vector2( 107.824, -27.9736 )
 scale = Vector2( 10.7127, 27.5897 )
 shape = SubResource( 21 )
 
+[node name="Enemy10" type="Area2D" parent="enemies"]
+position = Vector2( 10225.4, -675.157 )
+scale = Vector2( 0.127668, 0.109817 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemies/Enemy10"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy10"]
+scale = Vector2( 15.64, 9.92 )
+shape = SubResource( 20 )
+
+[node name="survivedArea" type="Area2D" parent="enemies/Enemy10"]
+position = Vector2( 349.09, -26.7998 )
+scale = Vector2( 1.31335, -0.821212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy10/survivedArea"]
+position = Vector2( 107.824, -27.9736 )
+scale = Vector2( 10.7127, 27.5897 )
+shape = SubResource( 21 )
+
 [node name="Enemy7" type="Area2D" parent="enemies"]
-position = Vector2( 4877.02, 644.834 )
+position = Vector2( 5086.88, 277.427 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -735,7 +851,7 @@ scale = Vector2( 10.7127, 27.5897 )
 shape = SubResource( 21 )
 
 [node name="Enemy8" type="Area2D" parent="enemies"]
-position = Vector2( 5115.54, 643.176 )
+position = Vector2( 5325.4, 275.769 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -758,7 +874,7 @@ scale = Vector2( 10.7127, 27.5897 )
 shape = SubResource( 21 )
 
 [node name="Enemy9" type="Area2D" parent="enemies"]
-position = Vector2( 5346.29, 641.538 )
+position = Vector2( 5556.15, 274.131 )
 scale = Vector2( 0.127668, 0.109817 )
 __meta__ = {
 "_edit_group_": true
@@ -787,15 +903,27 @@ script = ExtResource( 4 )
 motion_mirroring = Vector2( 1350, 0 )
 
 [node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 664.484, 336.546 )
-scale = Vector2( 0.724475, 0.627132 )
+position = Vector2( 708.044, 57.9211 )
+scale = Vector2( 0.724475, 1.14775 )
 z_index = -1
 texture = SubResource( 25 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1925.45, 1078.24 )
 
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+script = ExtResource( 4 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1350, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 6829.06, 915.929 )
+scale = Vector2( 1.52947, 1 )
+texture = ExtResource( 2 )
+
 [node name="FallingDeathZone" type="Area2D" parent="."]
-position = Vector2( 8065.77, 1219.78 )
+position = Vector2( 7886.9, 906.371 )
 scale = Vector2( 0.692314, 0.362082 )
 __meta__ = {
 "_edit_group_": true
@@ -804,6 +932,55 @@ __meta__ = {
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="FallingDeathZone"]
 scale = Vector2( 5.18294, 1 )
 shape = SubResource( 26 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 874.944
+margin_top = 499.182
+margin_right = 1144.94
+margin_bottom = 528.182
+rect_pivot_offset = Vector2( 135, 16.4486 )
+custom_fonts/font = ExtResource( 17 )
+text = "SPACE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 2182.72
+margin_top = 481.238
+margin_right = 2457.72
+margin_bottom = 542.238
+rect_pivot_offset = Vector2( 135, 16.4486 )
+custom_fonts/font = ExtResource( 17 )
+text = "score +20
+if you jump over an enemy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 3232.16
+margin_top = 523.283
+margin_right = 3507.16
+margin_bottom = 584.283
+rect_pivot_offset = Vector2( 135, 16.4486 )
+custom_fonts/font = ExtResource( 17 )
+text = "Now try to Walljump!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 4580.95
+margin_top = 47.3356
+margin_right = 5053.95
+margin_bottom = 108.336
+rect_pivot_offset = Vector2( 135, 16.4486 )
+custom_fonts/font = ExtResource( 17 )
+text = "1 Partyhat will help you to survive 1 enemy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="dontUpdateScorePlease" from="Ralf" to="ScoreCounter" method="_on_Ralf_dontUpdateScorePlease"]
 [connection signal="ralf_died" from="Ralf" to="ScoreCounter" method="_on_Ralf_ralf_died"]
@@ -816,6 +993,8 @@ shape = SubResource( 26 )
 [connection signal="area_entered" from="PartyHat1" to="PartyHat1" method="_on_PartyHat1_area_entered"]
 [connection signal="area_entered" from="PartyHat2" to="Ralf" method="_on_PartyHat1_area_entered"]
 [connection signal="area_entered" from="PartyHat2" to="PartyHat2" method="_on_PartyHat1_area_entered"]
+[connection signal="area_entered" from="PartyHat3" to="Ralf" method="_on_PartyHat1_area_entered"]
+[connection signal="area_entered" from="PartyHat3" to="PartyHat3" method="_on_PartyHat1_area_entered"]
 [connection signal="area_entered" from="Collectable1" to="Collectable1" method="_on_Collectable1_area_entered"]
 [connection signal="area_entered" from="Collectable1" to="ScoreCounter" method="_on_Collectable1_area_entered"]
 [connection signal="area_entered" from="Collectable2" to="Collectable2" method="_on_Collectable2_area_entered"]
@@ -824,14 +1003,14 @@ shape = SubResource( 26 )
 [connection signal="area_entered" from="Enemy1/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
 [connection signal="area_entered" from="Enemy2" to="Ralf" method="_on_Enemy1_area_entered"]
 [connection signal="area_entered" from="Enemy2/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
-[connection signal="area_entered" from="enemies/Enemy3" to="Ralf" method="_on_Enemy1_area_entered"]
-[connection signal="area_entered" from="enemies/Enemy3/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy4" to="Ralf" method="_on_Enemy1_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy4/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy5" to="Ralf" method="_on_Enemy1_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy5/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy6" to="Ralf" method="_on_Enemy1_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy6/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy10" to="Ralf" method="_on_Enemy1_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy10/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy7" to="Ralf" method="_on_Enemy1_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy7/survivedArea" to="ScoreCounter" method="_on_survivedArea_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy8" to="Ralf" method="_on_Enemy1_area_entered"]

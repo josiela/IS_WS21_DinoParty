@@ -34,40 +34,40 @@ margin_right = 1769.0
 margin_bottom = 980.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 653.0
-margin_top = 471.0
-margin_right = 1115.0
-margin_bottom = 509.0
+margin_left = 461.0
+margin_top = 459.0
+margin_right = 1308.0
+margin_bottom = 521.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 462.0
-margin_bottom = 17.0
+margin_right = 847.0
+margin_bottom = 29.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_right = 462.0
-margin_bottom = 17.0
+margin_right = 847.0
+margin_bottom = 29.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Oh sh*t ! I'm 66 milion years late for that party. I really need to hurry now"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 21.0
-margin_right = 462.0
-margin_bottom = 38.0
+margin_top = 33.0
+margin_right = 847.0
+margin_bottom = 62.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
-margin_left = 162.0
-margin_right = 300.0
-margin_bottom = 17.0
+margin_left = 297.0
+margin_right = 550.0
+margin_bottom = 29.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_right = 138.0
-margin_bottom = 17.0
+margin_right = 253.0
+margin_bottom = 29.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
-margin_right = 138.0
-margin_bottom = 17.0
+margin_right = 253.0
+margin_bottom = 29.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
