@@ -36,7 +36,7 @@ func _physics_process(delta):
 		emit_signal("dontUpdateScorePlease")
 	else:
 		emit_signal("updateScorePlease")
-	oldX=koords.x
+		oldX=koords.x
 	
 		
 	if(lifespan>0):											#nur Wenn nicht tot
@@ -115,13 +115,20 @@ func _on_PartyHat1_area_entered(area):
 	print("The Hat is entered")
 
 func nextToWall():
-	return nextToRightWall() or nextToLeftWall()
+	return nextToRightWall() or nextToLeftWall() or nextToRightWall2() or nextToLeftWall2() 
 	
 func nextToRightWall():
 	return $RightWall.is_colliding()
 	
 func nextToLeftWall():
 	return $LeftWall.is_colliding()
+	
+func nextToRightWall2():
+	return $RightWall2.is_colliding()
+	
+func nextToLeftWall2():
+	return $LeftWall2.is_colliding()
+	
 
 func _on_Enemy1_area_entered(area):
 	_set_lifespan(-1)
