@@ -20,7 +20,7 @@ var justWallJumped= false
 var setHighscore = true
 
 var movement= Vector2(500,0)
-const jumpforce= -1200
+const jumpforce= -1300
 
 # Vars about score
 var oldX=302.062012
@@ -47,7 +47,11 @@ func _physics_process(delta):
 		
 		if movement.x == 0:
 			movement.x = 500
-				
+		
+		if(nextToWall() and not is_on_floor() and not Input.is_action_just_pressed("jump") and movement.y>0   ):
+			print(movement.y)
+			gravity=10
+		else: gravity=90
 														 #about wallsliding and jumping and walljumping
 		if Input.is_action_just_pressed("jump"):
 			if(is_on_floor()):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Graphics/Dino1.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Grass1.png" type="Texture" id=2]
@@ -18,6 +18,9 @@
 [ext_resource path="res://Graphics/DinoParty_SpritesHat.png" type="Texture" id=16]
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=17]
 [ext_resource path="res://scripts/Disco.gd" type="Script" id=18]
+[ext_resource path="res://Graphics/roundarrow.png" type="Texture" id=19]
+[ext_resource path="res://Graphics/1154915.png" type="Texture" id=20]
+[ext_resource path="res://Graphics/heart.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2075.64, 234.652 )
@@ -258,6 +261,9 @@ scale = Vector2( 0.1, 0.1 )
 z_index = 1
 collision_mask = 3
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
 endScreen_path = "res://EndScreen.tscn"
 
 [node name="Area2D" type="Area2D" parent="Ralf"]
@@ -945,19 +951,16 @@ texture = ExtResource( 2 )
 [node name="FallingDeathZone" type="Area2D" parent="."]
 position = Vector2( 7886.9, 906.371 )
 scale = Vector2( 0.692314, 0.362082 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="FallingDeathZone"]
 scale = Vector2( 5.18294, 1 )
 shape = SubResource( 28 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 874.944
-margin_top = 499.182
-margin_right = 1144.94
-margin_bottom = 528.182
+margin_left = 790.849
+margin_top = 533.888
+margin_right = 1060.84
+margin_bottom = 562.888
 rect_pivot_offset = Vector2( 135, 16.4486 )
 custom_fonts/font = ExtResource( 17 )
 text = "SPACE"
@@ -966,41 +969,60 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 2182.72
-margin_top = 481.238
-margin_right = 2457.72
-margin_bottom = 542.238
+margin_left = 2400.04
+margin_top = 482.523
+margin_right = 2503.04
+margin_bottom = 543.523
 rect_pivot_offset = Vector2( 135, 16.4486 )
 custom_fonts/font = ExtResource( 17 )
 text = "score +20
-if you jump over an enemy"
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="."]
-margin_left = 3232.16
-margin_top = 523.283
-margin_right = 3507.16
-margin_bottom = 584.283
-rect_pivot_offset = Vector2( 135, 16.4486 )
-custom_fonts/font = ExtResource( 17 )
-text = "Now try to Walljump!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="roundarrow" type="Sprite" parent="Label2"]
+position = Vector2( 46.2917, 58.227 )
+scale = Vector2( 0.480273, 0.336574 )
+texture = ExtResource( 19 )
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 4580.95
-margin_top = 47.3356
-margin_right = 5053.95
-margin_bottom = 108.336
+margin_left = 4790.33
+margin_top = 54.0628
+margin_right = 5263.33
+margin_bottom = 115.063
 rect_pivot_offset = Vector2( 135, 16.4486 )
 custom_fonts/font = ExtResource( 17 )
-text = "1 Partyhat will help you to survive 1 enemy"
+text = "1 "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="heart" type="Sprite" parent="Label4"]
+position = Vector2( 42.3858, 15.2161 )
+scale = Vector2( 0.0494223, 0.0653813 )
+texture = ExtResource( 21 )
+
+[node name="1154915" type="Sprite" parent="."]
+position = Vector2( 3448.01, 573.466 )
+rotation = -1.22697
+scale = Vector2( 0.103624, 0.0945794 )
+texture = ExtResource( 20 )
+offset = Vector2( 0.000976563, -120.863 )
+
+[node name="1154916" type="Sprite" parent="."]
+position = Vector2( 3416.13, 467.387 )
+rotation = -3.31962
+scale = Vector2( 0.0953461, 0.092703 )
+texture = ExtResource( 20 )
+offset = Vector2( 0.000976563, -120.863 )
+
+[node name="1154917" type="Sprite" parent="."]
+position = Vector2( 3408.56, 384.139 )
+rotation = -1.47131
+scale = Vector2( 0.0953461, 0.092703 )
+texture = ExtResource( 20 )
+offset = Vector2( 0.000976563, -120.863 )
 
 [connection signal="dontUpdateScorePlease" from="Ralf" to="ScoreCounter" method="_on_Ralf_dontUpdateScorePlease"]
 [connection signal="ralf_died" from="Ralf" to="ScoreCounter" method="_on_Ralf_ralf_died"]
