@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SkyBackgroundGradient.png-43096ed909686f1ea285d34e789968a5.stex"
+path="res://.import/TrafficConePixel.png-f2e9173c968bdb7a2cf757c371551ec2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/SkyBackgroundGradient.png"
-dest_files=[ "res://.import/SkyBackgroundGradient.png-43096ed909686f1ea285d34e789968a5.stex" ]
+source_file="res://Graphics/TrafficConePixel.png"
+dest_files=[ "res://.import/TrafficConePixel.png-f2e9173c968bdb7a2cf757c371551ec2.stex" ]
 
 [params]
 

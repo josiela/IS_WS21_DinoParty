@@ -21,6 +21,7 @@
 [ext_resource path="res://Graphics/roundarrow.png" type="Texture" id=19]
 [ext_resource path="res://Graphics/1154915.png" type="Texture" id=20]
 [ext_resource path="res://Graphics/heart.png" type="Texture" id=21]
+[ext_resource path="res://Graphics/SkyBackgroundGradient1280x720.png" type="Texture" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2075.64, 234.652 )
@@ -47,73 +48,73 @@ extents = Vector2( 6.05922, 10 )
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 15 )
-region = Rect2( 561, 0, 187, 250 )
+region = Rect2( 187, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 250 )
+atlas = ExtResource( 15 )
+region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 187, 250 )
+atlas = ExtResource( 16 )
+region = Rect2( 187, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 187, 250 )
+region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 187, 0, 187, 250 )
+atlas = ExtResource( 15 )
+region = Rect2( 561, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 374, 0, 187, 250 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 187, 0, 187, 250 )
+atlas = ExtResource( 16 )
+region = Rect2( 561, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 15 )
-region = Rect2( 374, 0, 187, 250 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="SpriteFrames" id=17]
 animations = [ {
-"frames": [ SubResource( 9 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
-"name": "Hit",
+"name": "Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 10 ) ],
-"loop": true,
-"name": "Hat_Hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 11 ) ],
-"loop": true,
-"name": "Stand",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 12 ) ],
-"loop": true,
-"name": "Stand_Hat",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "Hat",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ), SubResource( 16 ) ],
+"frames": [ SubResource( 13 ) ],
 "loop": true,
-"name": "Run",
+"name": "Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "Stand_Hat",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "Hat_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
+"loop": true,
+"name": "Stand",
 "speed": 5.0
 } ]
 
@@ -142,10 +143,6 @@ extents = Vector2( 537.121, 422.921 )
 
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 541.754, 624.183 )
-
-[sub_resource type="StreamTexture" id=27]
-flags = 4
-load_path = "res://.import/SkyBackgroundGradient.png-43096ed909686f1ea285d34e789968a5.stex"
 
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 1163.9, 667.596 )
@@ -929,10 +926,9 @@ script = ExtResource( 4 )
 motion_mirroring = Vector2( 1350, 0 )
 
 [node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 127.28, -352.643 )
-scale = Vector2( 0.724475, 1.14775 )
 z_index = -1
-texture = SubResource( 27 )
+texture = ExtResource( 22 )
+centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 1925.45, 1078.24 )
 
