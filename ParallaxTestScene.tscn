@@ -23,7 +23,7 @@
 [ext_resource path="res://Graphics/SkyBackgroundGradient1280x720.png" type="Texture" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 192.59, 7.08327 )
+extents = Vector2( 418.328, 7.08327 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -148,8 +148,8 @@ __meta__ = {
 [node name="Floor" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 1919.28, 681.8 )
-scale = Vector2( 10, 10 )
+position = Vector2( 2135.41, 681.8 )
+scale = Vector2( 5.67421, 10 )
 z_index = 10
 shape = SubResource( 1 )
 
