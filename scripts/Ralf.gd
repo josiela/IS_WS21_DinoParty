@@ -39,8 +39,7 @@ func _physics_process(delta):
 		oldX=koords.x
 	
 		
-	if(lifespan>0):											#nur Wenn nicht tot
-		print(movement.x)
+	if(lifespan>0):
 		movement = move_and_slide(movement, Vector2.UP)
 		movement.y = movement.y + gravity
 		_animated_sprite.play("Run")
@@ -102,7 +101,7 @@ func _physics_process(delta):
 		emit_signal("ralf_died")
 		_animated_sprite.play("Hit")
 		if Input.is_action_just_pressed("jump"):
-			get_tree().change_scene("res://TestSzene.tscn")
+			get_tree().change_scene("res://ParallaxTestScene.tscn")
 			
 	
 
@@ -141,14 +140,12 @@ func _on_Enemy1_area_entered(area):
 func _on_PartyHat1_area_exited(area):
 	pass # Replace with function body.
 
-
-func _on_FallingDeathZone_area_entered(area):
-	print(lifespan)
-	lifespan=0
-
-
 func _on_Area2D_area_entered(area):
 	if get_tree().change_scene(endScreen_path) != OK:
 		# Error handling
 		print("Error: Unavailable endszene")
 		
+
+func _on_FallTracker_area_entered(area):
+	print(lifespan)
+	lifespan=0

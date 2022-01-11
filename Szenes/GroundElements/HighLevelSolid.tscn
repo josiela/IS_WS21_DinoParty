@@ -13,4 +13,5 @@ extents = Vector2( 150.927, 41.3028 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -0.516602, 34.0965 )
 shape = SubResource( 1 )

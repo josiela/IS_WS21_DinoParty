@@ -1,7 +1,5 @@
 [gd_scene load_steps=47 format=2]
 
-[ext_resource path="res://Szenes/GroundElements/LowLevel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Graphics/Grass1.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Ralf.gd" type="Script" id=3]
 [ext_resource path="res://ParallaxBackground.gd" type="Script" id=4]
 [ext_resource path="res://Graphics/Disco-2.png" type="Texture" id=5]
@@ -26,38 +24,37 @@
 [ext_resource path="res://Szenes/Enemies/TrafficCone.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Szenes/GroundElements/HighLevelSolid.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Music/dino_bgm.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Graphics/FloorPiece150.png" type="Texture" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 266.576, 99.3461 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 69.248, 11.7191 )
+extents = Vector2( 377.458, 15.1614 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 85.6763, 123.532 )
+extents = Vector2( 128.424, 16.8933 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 7763.48, 111.832 )
+extents = Vector2( 85.6763, 123.532 )
 
 [sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8304.72, 111.832 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 6.05922, 10 )
 
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 187, 0, 187, 250 )
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6.05922, 10 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 15 )
-region = Rect2( 374, 0, 187, 250 )
+region = Rect2( 187, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 187, 250 )
+atlas = ExtResource( 15 )
+region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
@@ -76,24 +73,24 @@ region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 250 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 0, 0, 187, 250 )
 
-[sub_resource type="SpriteFrames" id=15]
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 561, 0, 187, 250 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 187, 250 )
+
+[sub_resource type="SpriteFrames" id=16]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 8 ) ],
+"frames": [ SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "Run",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 9 ) ],
-"loop": true,
-"name": "Stand_Hat",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 10 ) ],
@@ -108,32 +105,37 @@ animations = [ {
 }, {
 "frames": [ SubResource( 13 ) ],
 "loop": true,
-"name": "Hat_Hit",
+"name": "Stand",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ) ],
 "loop": true,
-"name": "Stand",
+"name": "Hat_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "Stand_Hat",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 47.4751, 41.6222 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 1.41146, 2.48174 )
 
-[sub_resource type="StyleBoxFlat" id=18]
+[sub_resource type="StyleBoxFlat" id=19]
 bg_color = Color( 0, 0, 0, 0 )
 
-[sub_resource type="ShaderMaterial" id=19]
+[sub_resource type="ShaderMaterial" id=20]
 shader = ExtResource( 6 )
 shader_param/tape_wave_amount = 0.003
 shader_param/tape_crease_amount = 0.0
 shader_param/color_displacement = 0.0
 shader_param/lines_velocity = 0.1
 
-[sub_resource type="ShaderMaterial" id=20]
+[sub_resource type="ShaderMaterial" id=21]
 render_priority = -2
 shader = ExtResource( 11 )
 shader_param/vertJerkOpt = 0.05
@@ -154,10 +156,10 @@ __meta__ = {
 [node name="LevelDesign" type="Node2D" parent="."]
 
 [node name="TrafficCone2" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 1543.05, 565.988 )
+position = Vector2( 1441.89, 550.718 )
 
 [node name="TrafficCone" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 1168.29, 562.206 )
+position = Vector2( 1098.16, 555.56 )
 
 [node name="PartyUtils" parent="LevelDesign" instance=ExtResource( 19 )]
 position = Vector2( 717.943, 550.451 )
@@ -170,9 +172,9 @@ position = Vector2( 851.958, 717.723 )
 position = Vector2( 2153.06, 717.723 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/Ground2"]
-position = Vector2( 45.1176, 0 )
-scale = Vector2( 0.140752, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 54.4424, -7.10465 )
+scale = Vector2( 3.53325, 0.958632 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/Ground2"]
 position = Vector2( 52.2954, 0 )
@@ -182,9 +184,9 @@ shape = SubResource( 1 )
 position = Vector2( 6523.23, 717.301 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/Ground5"]
-position = Vector2( 45.1176, 0 )
-scale = Vector2( 0.140752, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 50.3971, 3.16777 )
+scale = Vector2( 3.51972, 0.881971 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/Ground5"]
 position = Vector2( 52.2954, 0 )
@@ -200,21 +202,24 @@ position = Vector2( 3547.84, 720.919 )
 position = Vector2( 3490.12, 493.695 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/GLvl1"]
-scale = Vector2( 0.20062, 0.0525814 )
-texture = ExtResource( 2 )
+position = Vector2( 19.205, -1.77617 )
+scale = Vector2( 5.02511, 0.133316 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/GLvl1"]
+position = Vector2( 21.3599, -4.04108 )
 shape = SubResource( 2 )
 
 [node name="GLvl2" type="StaticBody2D" parent="LevelDesign"]
 position = Vector2( 8478.07, 493.695 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/GLvl2"]
-scale = Vector2( 0.105199, 0.0525814 )
-texture = ExtResource( 2 )
+position = Vector2( 0, -0.576172 )
+scale = Vector2( 1.74079, 0.173 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/GLvl2"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="TrafficCone4" parent="LevelDesign" instance=ExtResource( 24 )]
 position = Vector2( 3343.28, 428.849 )
@@ -223,61 +228,60 @@ position = Vector2( 3343.28, 428.849 )
 position = Vector2( 3710.47, 429.196 )
 
 [node name="PartyUtil" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 3559.12, 565.465 )
+position = Vector2( 3504.71, 555.442 )
 
 [node name="Ground4" parent="LevelDesign" instance=ExtResource( 23 )]
 position = Vector2( 5254.57, 724.043 )
 
 [node name="TrafficCone6" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 4205.8, 567.941 )
+position = Vector2( 4205.8, 557.382 )
 
 [node name="TrafficCone7" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 4476.19, 568.182 )
+position = Vector2( 4476.19, 561.846 )
 
 [node name="TrafficCone8" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 4731.45, 570.2 )
-
-[node name="LowLevel" parent="LevelDesign" instance=ExtResource( 1 )]
-position = Vector2( 5506.18, 455.873 )
+position = Vector2( 4734.62, 563.864 )
 
 [node name="HighLevelPassable" parent="LevelDesign" instance=ExtResource( 20 )]
-position = Vector2( 5899.48, 511.501 )
+position = Vector2( 5676.57, 525.774 )
 
 [node name="TrafficCone9" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 5253.56, 456.95 )
+position = Vector2( 5227.16, 549.872 )
 
 [node name="PartyHad" parent="LevelDesign" instance=ExtResource( 12 )]
-position = Vector2( 5905.1, 393.266 )
+position = Vector2( 5681.08, 442.087 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LevelDesign"]
 position = Vector2( 7102.4, 717.301 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( -0.288223, -0.575943 )
+scale = Vector2( 1.13957, 1.12016 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="LevelDesign"]
 position = Vector2( 7400.24, 717.301 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D2"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( -1.72803, -0.575878 )
+scale = Vector2( 1.1434, 1.11492 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D2"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="LevelDesign"]
 position = Vector2( 7704.33, 717.301 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D3"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+scale = Vector2( 1.12036, 1.10445 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D3"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Ground6" parent="LevelDesign" instance=ExtResource( 23 )]
 position = Vector2( 8849.95, 717.301 )
@@ -286,121 +290,121 @@ position = Vector2( 8849.95, 717.301 )
 position = Vector2( 6602.96, 568.897 )
 
 [node name="Node2D2" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 8475.14, 434.785 )
+position = Vector2( 8477.44, 426.146 )
 
 [node name="HighLevelSolid" parent="LevelDesign" instance=ExtResource( 25 )]
-position = Vector2( 9499.08, 376.75 )
+position = Vector2( 9452.43, 421.671 )
 
 [node name="HighLevelSolid2" parent="LevelDesign" instance=ExtResource( 25 )]
-position = Vector2( 9964.29, 376.75 )
+position = Vector2( 9839.32, 389.996 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="LevelDesign"]
-position = Vector2( 9073.93, 309.588 )
+position = Vector2( 9082.5, 305.858 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D4"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 0, 13.2461 )
+scale = Vector2( 1.15877, 1.11492 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D4"]
-position = Vector2( 0.87793, 12.2885 )
-shape = SubResource( 3 )
+position = Vector2( 0.87793, 13.2429 )
+shape = SubResource( 4 )
 
 [node name="Ground7" parent="LevelDesign" instance=ExtResource( 23 )]
 position = Vector2( 10557.5, 719.414 )
 
 [node name="PartyUtils2" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 9507.91, 241.979 )
+position = Vector2( 9458.38, 337.005 )
 
 [node name="PartyHad2" parent="LevelDesign" instance=ExtResource( 12 )]
-position = Vector2( 9956.5, 247.57 )
+position = Vector2( 9832.2, 315.413 )
 
 [node name="PU" parent="LevelDesign" instance=ExtResource( 19 )]
 position = Vector2( 9720.69, 547.974 )
 
 [node name="TrafficCone10" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 10273.1, 565.219 )
+position = Vector2( 10142.1, 548.318 )
 
 [node name="TrafficCone11" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 10879.5, 564.356 )
+position = Vector2( 10796.1, 552.04 )
 
 [node name="PartyUtils3" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 11031.3, 583.366 )
+position = Vector2( 10973.2, 534.112 )
 
 [node name="TrafficCone12" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 11191.5, 567.018 )
+position = Vector2( 11169.1, 554.03 )
 
 [node name="Ground8" parent="LevelDesign" instance=ExtResource( 23 )]
-position = Vector2( 12506.3, 717.301 )
+position = Vector2( 12470.1, 717.301 )
 
 [node name="HighLevelSolid3" parent="LevelDesign" instance=ExtResource( 25 )]
-position = Vector2( 12391.9, 503.931 )
+position = Vector2( 12328.2, 401.995 )
 
 [node name="HighLevelSolid4" parent="LevelDesign" instance=ExtResource( 25 )]
-position = Vector2( 12392.7, 184.404 )
+position = Vector2( 12326.1, 217.078 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="LevelDesign"]
-position = Vector2( 11974.6, 309.588 )
+position = Vector2( 11980.2, 310.941 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D5"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 0, 9.62756 )
+scale = Vector2( 1.15039, 1.12735 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D5"]
 position = Vector2( 0.87793, 12.2885 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="LevelDesign"]
-position = Vector2( 11974.6, 60.6988 )
+position = Vector2( 11980.2, 62.0518 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D6"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 0.208725, 12.3484 )
+scale = Vector2( 1.14761, 1.11784 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D6"]
 position = Vector2( 0.87793, 12.2885 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="PartyUtils4" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 12386.9, 372.624 )
+position = Vector2( 12345.6, 336.64 )
 
 [node name="PartyHad3" parent="LevelDesign" instance=ExtResource( 12 )]
-position = Vector2( 12396.8, 49.0288 )
+position = Vector2( 12322.2, 151.583 )
 
 [node name="HighLevelSolid5" parent="LevelDesign" instance=ExtResource( 25 )]
-position = Vector2( 13334.4, 186.923 )
+position = Vector2( 13041.7, 518.624 )
 
 [node name="HighLevelSolid6" parent="LevelDesign" instance=ExtResource( 25 )]
-position = Vector2( 12857.4, 129.917 )
+position = Vector2( 12747, 174.831 )
 
 [node name="PartyUtils5" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 13345.8, 61.0941 )
+position = Vector2( 13054.9, 425.61 )
 
 [node name="TrafficCone13" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 12860, -9.28647 )
-
-[node name="PartyUtils6" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 12964.6, 568.313 )
+position = Vector2( 12843.9, 115.657 )
 
 [node name="Ground9" parent="LevelDesign" instance=ExtResource( 23 )]
-position = Vector2( 14214.4, 718.067 )
+position = Vector2( 14179.1, 718.067 )
 
 [node name="FallTracker" type="Area2D" parent="LevelDesign"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/FallTracker"]
 position = Vector2( 9316.71, 943.356 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="TrafficCone14" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 14118, 563.297 )
+position = Vector2( 13840.2, 548.106 )
 
 [node name="TrafficCone15" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 14539.2, 565.208 )
+position = Vector2( 14448.1, 547.846 )
 
 [node name="PartyUtils7" parent="LevelDesign" instance=ExtResource( 19 )]
-position = Vector2( 14539.6, 456.912 )
+position = Vector2( 14452.8, 423.274 )
 
 [node name="Ground10" parent="LevelDesign" instance=ExtResource( 23 )]
-position = Vector2( 16062.4, 718.067 )
+position = Vector2( 16049.4, 711.589 )
 
 [node name="HighLevelSolid7" parent="LevelDesign" instance=ExtResource( 25 )]
 position = Vector2( 15350.3, 372.172 )
@@ -409,54 +413,58 @@ position = Vector2( 15350.3, 372.172 )
 position = Vector2( 14959, 278.774 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D7"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 0.852734, 10.4605 )
+scale = Vector2( 1.17538, 1.11567 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D7"]
 position = Vector2( 0.87793, 12.2885 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="LevelDesign"]
 position = Vector2( 14959, 29.8844 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D8"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 0, 12.5526 )
+scale = Vector2( 1.18342, 1.13469 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D8"]
 position = Vector2( 0.87793, 12.2885 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="LevelDesign"]
 position = Vector2( 14959, -220.331 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D9"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 0, 11.9397 )
+scale = Vector2( 1.16881, 1.12917 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D9"]
 position = Vector2( 0.87793, 12.2885 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="LevelDesign"]
-position = Vector2( 15289.9, 22.6518 )
+position = Vector2( 15291, 99.694 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D10"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+position = Vector2( 0.863426, 12.3038 )
+scale = Vector2( 1.15051, 1.11915 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D10"]
 position = Vector2( 0.87793, 13.5835 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Ground11" parent="LevelDesign" instance=ExtResource( 23 )]
-position = Vector2( 16363, -43.5675 )
+position = Vector2( 16393.4, 70.3682 )
 
 [node name="TrafficCone16" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 16275.5, -198.781 )
+position = Vector2( 16095.4, -98.9517 )
 
 [node name="TrafficCone17" parent="LevelDesign" instance=ExtResource( 24 )]
-position = Vector2( 16786.5, -199.144 )
+position = Vector2( 16771.3, -101.485 )
 
 [node name="PartyUtils8" parent="LevelDesign" instance=ExtResource( 19 )]
 position = Vector2( 15845.4, 570.892 )
@@ -474,47 +482,14 @@ position = Vector2( 18263.5, 718.067 )
 position = Vector2( 17149.1, 718.067 )
 
 [node name="Sprite" type="Sprite" parent="LevelDesign/StaticBody2D12"]
-scale = Vector2( 0.045326, 0.45 )
-texture = ExtResource( 2 )
+scale = Vector2( 1.16833, 1.14563 )
+texture = ExtResource( 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/StaticBody2D12"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
-[node name="GLvl3" type="StaticBody2D" parent="LevelDesign"]
-position = Vector2( 17803.2, 532.646 )
-
-[node name="Sprite" type="Sprite" parent="LevelDesign/GLvl3"]
-position = Vector2( -131.886, 0 )
-scale = Vector2( 0.0357671, 0.0525814 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/GLvl3"]
-position = Vector2( -131.75, 2.20288 )
-shape = SubResource( 2 )
-
-[node name="GLvl4" type="StaticBody2D" parent="LevelDesign"]
-position = Vector2( 18028.7, 457.829 )
-
-[node name="Sprite" type="Sprite" parent="LevelDesign/GLvl4"]
-position = Vector2( -131.886, 0 )
-scale = Vector2( 0.0357671, 0.0525814 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/GLvl4"]
-position = Vector2( -131.75, 2.20288 )
-shape = SubResource( 2 )
-
-[node name="GLvl5" type="StaticBody2D" parent="LevelDesign"]
-position = Vector2( 18275.4, 393.752 )
-
-[node name="Sprite" type="Sprite" parent="LevelDesign/GLvl5"]
-position = Vector2( -131.886, 0 )
-scale = Vector2( 0.0357671, 0.0525814 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelDesign/GLvl5"]
-position = Vector2( -131.75, 2.20288 )
-shape = SubResource( 2 )
+[node name="PartyUtils6" parent="LevelDesign" instance=ExtResource( 19 )]
+position = Vector2( 7550.31, 483.459 )
 
 [node name="Ralf" type="KinematicBody2D" parent="."]
 position = Vector2( 236.249, 559.304 )
@@ -531,12 +506,12 @@ endScreen_path = "res://EndScreen.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ralf/Area2D"]
 scale = Vector2( 26.2, 41.8 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ralf"]
 position = Vector2( 58.4637, -6.74579 )
 scale = Vector2( 27.9112, 38.7103 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Camera2D" type="Camera2D" parent="Ralf"]
 position = Vector2( 3713.58, -1304.9 )
@@ -554,7 +529,7 @@ one_shot = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Ralf"]
 scale = Vector2( 5, 5 )
-frames = SubResource( 15 )
+frames = SubResource( 16 )
 animation = "Hit"
 playing = true
 offset = Vector2( 0, -15 )
@@ -586,7 +561,7 @@ enabled = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ralf"]
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 20269.8, -262.487 )
+position = Vector2( 24832.1, 472.913 )
 scale = Vector2( 1.79124, 2.82024 )
 collision_layer = 130
 script = ExtResource( 18 )
@@ -594,6 +569,7 @@ endScreen_path = "res://EndScreen.tscn"
 
 [node name="Disco" type="Sprite" parent="Area2D"]
 position = Vector2( -3558.91, -68.3189 )
+rotation = 0.0189035
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -602,21 +578,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -3569.56, 4.45207 )
 z_index = 1
-shape = SubResource( 16 )
-
-[node name="DyingText" type="Label" parent="."]
-margin_left = 471.768
-margin_top = 404.474
-margin_right = 708.768
-margin_bottom = 435.474
-custom_fonts/font = ExtResource( 17 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "				  				 Oh No!
-Maby i'll be in time for the next party"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+shape = SubResource( 17 )
 
 [node name="PartyHat1" type="Area2D" parent="."]
 position = Vector2( 4821.6, 157.137 )
@@ -631,7 +593,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PartyHat1"]
 scale = Vector2( 15.64, 9.92 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="ScoreCounter" type="CanvasLayer" parent="."]
 script = ExtResource( 14 )
@@ -641,7 +603,7 @@ margin_left = 56.263
 margin_top = 7.7862
 margin_right = 263.263
 margin_bottom = 73.786
-custom_styles/panel = SubResource( 18 )
+custom_styles/panel = SubResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -709,20 +671,21 @@ margin_left = 534.509
 margin_top = 312.607
 margin_right = 797.509
 margin_bottom = 405.607
-custom_styles/panel = SubResource( 18 )
+custom_styles/panel = SubResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DeathTextField" type="Label" parent="DeathText"]
-margin_left = 582.0
-margin_top = 345.495
-margin_right = 768.0
-margin_bottom = 387.495
+[node name="DyingText" type="Label" parent="DeathText"]
+margin_left = 471.768
+margin_top = 404.474
+margin_right = 1017.77
+margin_bottom = 477.474
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-uppercase = true
+text = "				  				 Oh No!
+Maybe i'll be in time for the next party"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -746,7 +709,7 @@ copy_mode = 2
 rect = Rect2( 0, 0, 1280, 1440 )
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxVHSEffect/ParallaxLayer/Effects/BackBufferCopy"]
-material = SubResource( 19 )
+material = SubResource( 20 )
 margin_right = 1280.0
 margin_bottom = 1440.0
 __meta__ = {
@@ -760,7 +723,7 @@ copy_mode = 2
 rect = Rect2( 0, 0, 1280, 1440 )
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxVHSEffect/ParallaxLayer/Effects/BackBufferCopy2"]
-material = SubResource( 20 )
+material = SubResource( 21 )
 anchor_top = 0.00277778
 anchor_bottom = 0.00277778
 margin_top = -4.0

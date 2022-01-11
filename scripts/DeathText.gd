@@ -1,10 +1,10 @@
 extends CanvasLayer
-
+onready var text = get_node("/root/World/DeathText/DyingText")
 
 func _ready():
-	pass
+	text.visible = false
 
 
 func _on_Ralf_ralf_died():
-	$DeathTextField.text= String("Oh no u died :'(")
+	text.visible = true
 	
