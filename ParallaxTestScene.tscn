@@ -69,22 +69,22 @@ region = Rect2( 0, 0, 187, 250 )
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 187, 250 )
+region = Rect2( 187, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 187, 0, 187, 250 )
+region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 374, 0, 187, 250 )
+region = Rect2( 561, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 250 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="SpriteFrames" id=16]
 animations = [ {
@@ -103,19 +103,19 @@ animations = [ {
 "name": "Stand",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ) ],
-"loop": true,
-"name": "Stand_Hat",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "Hat",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ) ],
+"frames": [ SubResource( 14 ) ],
 "loop": true,
 "name": "Hat_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "Stand_Hat",
 "speed": 5.0
 } ]
 

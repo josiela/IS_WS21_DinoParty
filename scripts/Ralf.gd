@@ -48,7 +48,7 @@ func _physics_process(delta):
 		movement.y = movement.y + gravity
 		_animated_sprite.play("Run")
 		
-		if movement.x == 0:
+		if movement.x == 0 :
 			movement.x = 500
 		
 		if(nextToWall() and not is_on_floor() and not Input.is_action_just_pressed("jump") and movement.y>0   ):
@@ -76,7 +76,7 @@ func _physics_process(delta):
 
 	
 		if (is_on_floor() && direction==-1):
-			movement.x=300
+			movement.x=500
 			$AnimatedSprite.flip_h=false
 			
 			
