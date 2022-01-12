@@ -17,7 +17,9 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	print("Hit cone")
+	if body.name == "Ralf":
+		print("Hit cone")
+		Signals.emit_signal("hitCone")
 
 
 func _on_VisibilityNotifier2D_screen_exited():

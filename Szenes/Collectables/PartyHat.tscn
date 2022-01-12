@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 24.4002
 
-[node name="PartyHad" type="Node2D"]
+[node name="PartyHat" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

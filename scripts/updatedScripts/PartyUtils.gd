@@ -17,6 +17,7 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	print("Entered party utensil")
+	Signals.emit_signal("pickedUpCollectable")
 	queue_free()
 
 

@@ -7,6 +7,7 @@ var updateScore=true
 
 func _ready():
 	$ScoreField.text= String(scoreEasy)
+	Signals.connect("pickedUpCollectable", self, "pickedUpCollectable")
 
 
 
@@ -25,8 +26,7 @@ func _on_survivedArea_area_entered(area):
 	scoreEasy+=20
 
 
-func _on_Collectable1_area_entered(area):
-
+func pickedUpCollectable():
 	collectables+=1;
 
 

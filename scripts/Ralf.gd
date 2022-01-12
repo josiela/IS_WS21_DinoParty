@@ -27,6 +27,10 @@ var oldX=302.062012
 # Vars about physics
 var gravity= 90
 
+func _ready():
+	Signals.connect("hitCone", self, "hitCone")
+	Signals.connect("collectedPartyHat", self, "collectedPartyHat")
+	Signals.connect("pickedUpCollectable", self, "pickedUpCollectable")
 
 func _physics_process(delta):
 	
@@ -112,7 +116,7 @@ func _set_lifespan(variable):
 		lifespan+=variable
 		emit_signal("lifespan_updated", lifespan)
 
-func _on_PartyHat1_area_entered(area):
+func collectedPartyHat():
 	_set_lifespan(1)
 	_animated_sprite.play("Hat")
 	print("The Hat is entered")
@@ -133,7 +137,8 @@ func nextToLeftWall2():
 	return $LeftWall2.is_colliding()
 	
 
-func _on_Enemy1_area_entered(area):
+func hitCone():
+	print("workies")
 	_set_lifespan(-1)
 
 
