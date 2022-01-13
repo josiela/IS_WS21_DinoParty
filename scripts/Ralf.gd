@@ -46,7 +46,10 @@ func _physics_process(delta):
 	if(lifespan>0):
 		movement = move_and_slide(movement, Vector2.UP)
 		movement.y = movement.y + gravity
-		_animated_sprite.play("Run")
+		if(lifespan==1):
+			_animated_sprite.play("Run")
+		else:
+			_animated_sprite.play("Hat")
 		
 		if movement.x == 0 :
 			movement.x = 500
