@@ -15,19 +15,19 @@ func _process(delta):
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 3 )
-shader_param/tape_wave_amount = 0.003
+shader_param/tape_wave_amount = 0.001
 shader_param/tape_crease_amount = 0.0
 shader_param/color_displacement = 0.0
-shader_param/lines_velocity = 0.1
+shader_param/lines_velocity = 0.08
 
 [sub_resource type="ShaderMaterial" id=3]
 render_priority = -2
 shader = ExtResource( 4 )
-shader_param/vertJerkOpt = 0.099
+shader_param/vertJerkOpt = 0.07
 shader_param/vertMovementOpt = 0.0
 shader_param/bottomStaticOpt = 0.0
 shader_param/bottomStaticStrenth = 0.0
-shader_param/scalinesOpt = 0.283
+shader_param/scalinesOpt = 0.3
 shader_param/rgbOffsetOpt = 0.0
 shader_param/horzFuzzOpt = 0.0
 

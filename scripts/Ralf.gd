@@ -48,8 +48,12 @@ func _physics_process(delta):
 		movement.y = movement.y + gravity
 		if(lifespan==1):
 			_animated_sprite.play("Run")
-		else:
-			_animated_sprite.play("Hat")
+		if (lifespan ==2):
+			_animated_sprite.play("Hat_Run")
+		if (lifespan == 3):
+			_animated_sprite.play("Hat2_Run")
+		if (lifespan == 4):
+			_animated_sprite.play("Hat3_Run")
 		
 		if movement.x == 0 :
 			movement.x = 500
@@ -63,7 +67,14 @@ func _physics_process(delta):
 			if(is_on_floor()):
 				#movement.x=500
 				movement.y= jumpforce
-				_animated_sprite.play("Stand")
+				if(lifespan==1):
+					_animated_sprite.play("Stand")
+				if (lifespan ==2):
+					_animated_sprite.play("Stand_Hat")
+				if (lifespan == 3):
+					_animated_sprite.play("Stand_Hat2")
+				if (lifespan == 4):
+					_animated_sprite.play("Stand_Hat3")
 				
 			if(nextToWall() and not is_on_floor()):
 				movement.y= jumpforce

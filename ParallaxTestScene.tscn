@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Graphics/1154915.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/roundarrow.png" type="Texture" id=2]
@@ -12,13 +12,15 @@
 [ext_resource path="res://Graphics/CityBackground2560.png" type="Texture" id=10]
 [ext_resource path="res://TV.shader" type="Shader" id=11]
 [ext_resource path="res://Szenes/Collectables/PartyHat.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2_3Hats.png" type="Texture" id=13]
 [ext_resource path="res://scripts/CanvasLayer.gd" type="Script" id=14]
 [ext_resource path="res://Graphics/DinoParty_SpritesDefault.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/DinoParty_SpritesHat.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2_2Hats.png" type="Texture" id=16]
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=17]
 [ext_resource path="res://scripts/Disco.gd" type="Script" id=18]
 [ext_resource path="res://Szenes/Collectables/PartyUtils.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Szenes/GroundElements/HighLevelPassable.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2.png" type="Texture" id=21]
 [ext_resource path="res://Graphics/SkyBackgroundGradient1280x1440.png" type="Texture" id=22]
 [ext_resource path="res://Szenes/GroundElements/Ground.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Szenes/Enemies/TrafficCone.tscn" type="PackedScene" id=24]
@@ -49,97 +51,167 @@ extents = Vector2( 6.05922, 10 )
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 15 )
-region = Rect2( 561, 0, 187, 250 )
+region = Rect2( 187, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 250 )
+atlas = ExtResource( 15 )
+region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 187, 250 )
+atlas = ExtResource( 21 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 187, 250 )
+atlas = ExtResource( 21 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 187, 0, 187, 250 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 374, 0, 187, 250 )
+atlas = ExtResource( 13 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 15 )
-region = Rect2( 187, 0, 187, 250 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 374, 0, 187, 250 )
+atlas = ExtResource( 21 )
+region = Rect2( 561, 0, 187, 300 )
 
-[sub_resource type="SpriteFrames" id=16]
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 561, 0, 187, 250 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 187, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 374, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 187, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 374, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 187, 300 )
+
+[sub_resource type="SpriteFrames" id=24]
 animations = [ {
-"frames": [ SubResource( 8 ) ],
+"frames": [ SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
-"name": "Hit",
+"name": "Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 9 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
-"name": "Hat_Hit",
+"name": "Hat_Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 10 ) ],
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "Hat2_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "Hat3_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ) ],
 "loop": true,
 "name": "Stand",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ) ],
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "Hat_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
 "loop": true,
 "name": "Stand_Hat",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ SubResource( 17 ) ],
 "loop": true,
-"name": "Hat",
+"name": "Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"frames": [ SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
-"name": "Run",
+"name": "Hat2_Run",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "Hat3_Run",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 22 ) ],
+"loop": true,
+"name": "Stand_Hat3",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 23 ) ],
+"loop": true,
+"name": "Stand_Hat2",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 47.4751, 41.6222 )
 
-[sub_resource type="StyleBoxFlat" id=18]
+[sub_resource type="StyleBoxFlat" id=26]
 bg_color = Color( 0, 0, 0, 0 )
 
-[sub_resource type="ShaderMaterial" id=19]
+[sub_resource type="ShaderMaterial" id=27]
 shader = ExtResource( 6 )
-shader_param/tape_wave_amount = 0.003
+shader_param/tape_wave_amount = 0.001
 shader_param/tape_crease_amount = 0.0
 shader_param/color_displacement = 0.0
-shader_param/lines_velocity = 0.1
+shader_param/lines_velocity = 0.08
 
-[sub_resource type="ShaderMaterial" id=20]
+[sub_resource type="ShaderMaterial" id=28]
 render_priority = -2
 shader = ExtResource( 11 )
-shader_param/vertJerkOpt = 0.05
+shader_param/vertJerkOpt = 0.07
 shader_param/vertMovementOpt = 0.0
 shader_param/bottomStaticOpt = 0.0
 shader_param/bottomStaticStrenth = 0.0
-shader_param/scalinesOpt = 0.326
+shader_param/scalinesOpt = 0.3
 shader_param/rgbOffsetOpt = 0.0
 shader_param/horzFuzzOpt = 0.0
 
@@ -543,8 +615,8 @@ one_shot = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Ralf"]
 scale = Vector2( 5, 5 )
-frames = SubResource( 16 )
-animation = "Hit"
+frames = SubResource( 24 )
+animation = "Hat3_Hit"
 playing = true
 offset = Vector2( 0, -15 )
 
@@ -592,7 +664,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -3569.56, 4.45207 )
 z_index = 1
-shape = SubResource( 17 )
+shape = SubResource( 25 )
 
 [node name="ScoreCounter" type="CanvasLayer" parent="."]
 script = ExtResource( 14 )
@@ -602,7 +674,7 @@ margin_left = 56.263
 margin_top = 7.7862
 margin_right = 263.263
 margin_bottom = 73.786
-custom_styles/panel = SubResource( 18 )
+custom_styles/panel = SubResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -673,7 +745,7 @@ margin_left = 534.509
 margin_top = 312.607
 margin_right = 797.509
 margin_bottom = 405.607
-custom_styles/panel = SubResource( 18 )
+custom_styles/panel = SubResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -712,7 +784,7 @@ copy_mode = 2
 rect = Rect2( 0, 0, 1280, 1440 )
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxVHSEffect/ParallaxLayer/Effects/BackBufferCopy"]
-material = SubResource( 19 )
+material = SubResource( 27 )
 margin_right = 1280.0
 margin_bottom = 1440.0
 __meta__ = {
@@ -726,7 +798,7 @@ copy_mode = 2
 rect = Rect2( 0, 0, 1280, 1440 )
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxVHSEffect/ParallaxLayer/Effects/BackBufferCopy2"]
-material = SubResource( 20 )
+material = SubResource( 28 )
 anchor_top = 0.00277778
 anchor_bottom = 0.00277778
 margin_top = -4.0
