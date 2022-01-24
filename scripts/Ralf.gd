@@ -19,7 +19,7 @@ var wallJumpForce=500
 var justWallJumped= false
 var setHighscore = true
 
-var movement= Vector2(500,0)
+var movement= Vector2(450,0)
 const jumpforce= -1300
 
 # Vars about score
@@ -56,7 +56,7 @@ func _physics_process(delta):
 			_animated_sprite.play("Hat3_Run")
 		
 		if movement.x == 0 :
-			movement.x = 500
+			movement.x = 450
 		
 		if(nextToWall() and not is_on_floor() and not Input.is_action_just_pressed("jump") and movement.y>0   ):
 			print(movement.y)
@@ -90,7 +90,7 @@ func _physics_process(delta):
 
 	
 		if (is_on_floor() && direction==-1):
-			movement.x=500
+			movement.x=450
 			$AnimatedSprite.flip_h=false
 			
 			

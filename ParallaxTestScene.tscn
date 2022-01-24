@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Graphics/1154915.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/roundarrow.png" type="Texture" id=2]
@@ -27,6 +27,8 @@
 [ext_resource path="res://Szenes/GroundElements/HighLevelSolid.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Music/dino_bgm.ogg" type="AudioStream" id=26]
 [ext_resource path="res://Graphics/FloorPiece150.png" type="Texture" id=27]
+[ext_resource path="res://Graphics/PartyHat.png" type="Texture" id=28]
+[ext_resource path="res://PartyhatAnzahl.gd" type="Script" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 266.576, 99.3461 )
@@ -70,62 +72,62 @@ region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 300 )
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 21 )
 region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 187, 250 )
+atlas = ExtResource( 13 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 561, 0, 187, 300 )
+atlas = ExtResource( 13 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 187, 300 )
+atlas = ExtResource( 13 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 561, 0, 187, 250 )
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 187, 0, 187, 300 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=19]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 374, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 187, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 374, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 0, 0, 187, 300 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 561, 0, 187, 250 )
+
+[sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 16 )
+region = Rect2( 187, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 374, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="SpriteFrames" id=24]
@@ -142,52 +144,52 @@ animations = [ {
 }, {
 "frames": [ SubResource( 12 ) ],
 "loop": true,
-"name": "Hat2_Hit",
+"name": "Stand",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ) ],
 "loop": true,
-"name": "Hat3_Hit",
+"name": "Hat_Hit",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ) ],
 "loop": true,
-"name": "Stand",
+"name": "Hat3_Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ) ],
-"loop": true,
-"name": "Hat_Hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 16 ) ],
-"loop": true,
-"name": "Stand_Hat",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 17 ) ],
-"loop": true,
-"name": "Hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 18 ), SubResource( 19 ) ],
-"loop": true,
-"name": "Hat2_Run",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "Hat3_Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 22 ) ],
+"frames": [ SubResource( 17 ) ],
+"loop": true,
+"name": "Stand_Hat2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 18 ) ],
+"loop": true,
+"name": "Hat2_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 19 ) ],
 "loop": true,
 "name": "Stand_Hat3",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 20 ) ],
+"loop": true,
+"name": "Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "Hat2_Run",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 23 ) ],
 "loop": true,
-"name": "Stand_Hat2",
+"name": "Stand_Hat",
 "speed": 5.0
 } ]
 
@@ -692,6 +694,7 @@ __meta__ = {
 }
 
 [node name="CollectableField" type="Label" parent="ScoreCounter"]
+visible = false
 margin_left = 111.042
 margin_top = 49.2869
 margin_right = 503.042
@@ -705,12 +708,14 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="ScoreCounter"]
+visible = false
 position = Vector2( 79.3377, 61.6834 )
 rotation = 0.785398
 scale = Vector2( 0.354154, 0.4456 )
 texture = ExtResource( 7 )
 
 [node name="x" type="Label" parent="ScoreCounter"]
+visible = false
 anchor_left = -0.005
 anchor_right = 0.073
 margin_left = 97.0
@@ -733,6 +738,42 @@ rect_pivot_offset = Vector2( 58.3296, 13.9885 )
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Highscore"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PartyHat" type="Sprite" parent="ScoreCounter"]
+visible = false
+position = Vector2( 75.7265, 28.0634 )
+scale = Vector2( 0.46546, 0.478187 )
+texture = ExtResource( 28 )
+
+[node name="xPartyHat" type="Label" parent="ScoreCounter"]
+visible = false
+anchor_left = -0.005
+anchor_right = 0.073
+margin_left = 97.5411
+margin_top = 14.9922
+margin_right = 289.485
+margin_bottom = 49.9922
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PartyhatAnzahl" type="Label" parent="ScoreCounter"]
+visible = false
+margin_left = 110.19
+margin_top = 17.1496
+margin_right = 320.19
+margin_bottom = 52.1496
+rect_pivot_offset = Vector2( 58.3296, 13.9885 )
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "PartyHat Anzahl"
+script = ExtResource( 29 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
