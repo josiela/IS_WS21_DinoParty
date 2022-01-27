@@ -12,6 +12,13 @@ func _ready():
 		save_data.close()
 		
 	$CenterContainer/VBoxContainer/CenterContainer3/highscore.text= "Highscore: " + String(highscore)
+	if highscore<=46:
+		$CenterContainer/VBoxContainer/CenterContainer.visible=false
+		$CenterContainer/VBoxContainer/CenterContainer2.visible=false
+	else:
+		$CenterContainer/VBoxContainer/Level21.visible = false
+		$CenterContainer/VBoxContainer/Level22.visible = false
+		$CenterContainer/VBoxContainer/Level23.visible = false
 
 func _process(delta):
 	if Input.is_action_just_pressed("jump"):

@@ -1,24 +1,23 @@
 extends CanvasLayer
 
 var scoreEasy= 0;
-var collectables=-1;
+var collectables=0;
 var isalive=true;
 var updateScore=true
 var partyHatCounter=0;
 
+onready var timer = get_node("/root/World/Timer")
 
 func _ready():
+	timer.set_wait_time(0.5)
+	timer.start()
 	$ScoreField.text= String(scoreEasy)
 	Signals.connect("pickedUpCollectable", self, "pickedUpCollectable")
 	$PartyhatAnzahl.text=String(partyHatCounter)
 	Signals.connect("collectedPartyHat", self, "collectedPartyHat")
 	Signals.connect("hitCone", self, "hitCone")
 
-
 func _physics_process(delta):
-	if(isalive and updateScore):
-		scoreEasy+=0.06
-	
 	$ScoreField.text= String(scoreEasy)
 	$CollectableField.text=String(collectables)
 	$PartyhatAnzahl.text=String(partyHatCounter)
@@ -47,12 +46,13 @@ func _on_Ralf_ralf_died():
 	isalive=false
 
 
-func _on_survivedArea_area_entered(area):
-	scoreEasy+=20
-
-
 func pickedUpCollectable():
 	collectables+=1;
+	if scoreEasy <= 3:
+		scoreEasy=0;
+	else:
+		scoreEasy-=3;
+	
 
 
 func _on_Ralf_dontUpdateScorePlease():
@@ -66,5 +66,10 @@ func collectedPartyHat():
 	partyHatCounter+=1
  
 func hitCone():
-	if(partyHatCounter>=1):
+	if(partyHatCounter>=1 && partyHatCounter <=3):
 		partyHatCounter-=1
+
+
+func _on_Timer_timeout():
+	if(isalive and updateScore):
+		scoreEasy+=1
