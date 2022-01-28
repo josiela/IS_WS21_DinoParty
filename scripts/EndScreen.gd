@@ -13,6 +13,7 @@ func _ready():
 		
 	$CenterContainer/VBoxContainer/CenterContainer3/highscore.text= "Highscore: " + String(highscore)
 	if highscore<=48:
+		LevelState.level1 = false
 		$CenterContainer/VBoxContainer/CenterContainer.visible=false
 		$CenterContainer/VBoxContainer/CenterContainer2.visible=false
 	else:

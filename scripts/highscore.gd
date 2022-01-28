@@ -4,12 +4,20 @@ const SAVE_FILE_PATH = "user://savedata.save"
 
 var highscore = 0
 
+onready var Level1 = get_node("LevelDesign")
+onready var Level2 = get_node("2ndLevel")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 func _ready():
-	
 	self.load_highscore()
+	if highscore <= 48 && highscore > 0:
+		LevelState.level1=false
+	print(LevelState.level1)
+	if LevelState.level1:
+		Level2.queue_free()
+	else:
+		Level1.queue_free()
 	$ScoreCounter/highscore.text= "Best time: " + String(highscore)
 
 func setHighscore(score):
