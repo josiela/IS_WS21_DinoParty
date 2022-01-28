@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
+[ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Graphics/FloorPiece150.png" type="Texture" id=5]
 [ext_resource path="res://Szenes/Collectables/PartyUtils.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Szenes/GroundElements/Ground.tscn" type="PackedScene" id=7]
@@ -16,7 +17,7 @@ extents = Vector2( 84.954, 123.532 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 72.6709, 120.862 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 50.2656, 87.6733 )
 
 [node name="2ndLevel" type="Node"]
@@ -111,9 +112,6 @@ position = Vector2( 4415.8, 600.638 )
 
 [node name="Ground2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3804.43, 765.134 )
-
-[node name="PartyUtils" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1723.43, 647.743 )
 
 [node name="PartyUtils4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 8105.54, 281.865 )
@@ -242,4 +240,46 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="groundblock"]
 position = Vector2( 5730.8, 349.147 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
+
+[node name="ScoreField" type="Label" parent="."]
+margin_left = 2843.96
+margin_top = 448.482
+margin_right = 3249.96
+margin_bottom = 483.482
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-3 Sek"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreField2" type="Label" parent="."]
+margin_left = 5438.89
+margin_top = 198.28
+margin_right = 5844.89
+margin_bottom = 233.28
+rect_pivot_offset = Vector2( -2998.62, 417.981 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-3 Sek"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreField3" type="Label" parent="."]
+margin_left = 960.028
+margin_top = 526.068
+margin_right = 1366.03
+margin_bottom = 561.068
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-3 Sek"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PartyUtils11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 922.395, 556.407 )

@@ -40,73 +40,73 @@ region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 187, 250 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
 atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 187, 300 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 561, 0, 187, 250 )
 
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 187, 0, 187, 300 )
+
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 187, 300 )
+atlas = ExtResource( 16 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 187, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 374, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 187, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 374, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 13 )
 region = Rect2( 561, 0, 187, 300 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 561, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 16 )
 region = Rect2( 0, 0, 187, 300 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 21 )
-region = Rect2( 561, 0, 187, 300 )
+region = Rect2( 187, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 374, 0, 187, 300 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 187, 0, 187, 300 )
+atlas = ExtResource( 16 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 13 )
-region = Rect2( 374, 0, 187, 300 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 300 )
+atlas = ExtResource( 13 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="SpriteFrames" id=19]
 animations = [ {
@@ -117,57 +117,57 @@ animations = [ {
 }, {
 "frames": [ SubResource( 5 ) ],
 "loop": true,
-"name": "Stand",
+"name": "Stand_Hat",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 6 ) ],
 "loop": true,
-"name": "Stand_Hat",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 7 ) ],
-"loop": true,
 "name": "Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 8 ) ],
-"loop": true,
-"name": "Stand_Hat3",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "Hat2_Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ) ],
-"loop": true,
-"name": "Hat_Run",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 13 ) ],
+"frames": [ SubResource( 9 ) ],
 "loop": true,
 "name": "Hat3_Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 14 ) ],
-"loop": true,
-"name": "Stand_Hat2",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 15 ) ],
+"frames": [ SubResource( 10 ) ],
 "loop": true,
 "name": "Hat_Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 11 ) ],
 "loop": true,
-"name": "Hat3_Run",
+"name": "Stand_Hat3",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 18 ) ],
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "Stand_Hat2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "Hat_Run",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "Stand",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
 "loop": true,
 "name": "Hat2_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "Hat3_Run",
 "speed": 5.0
 } ]
 
@@ -326,13 +326,13 @@ __meta__ = {
 }
 
 [node name="ScoreField" type="Label" parent="ScoreCounter"]
-margin_left = 64.2943
-margin_top = 75.5378
-margin_right = 354.294
-margin_bottom = 109.538
+margin_left = 175.672
+margin_top = 74.1172
+margin_right = 581.672
+margin_bottom = 109.117
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Hier sollte dein Score stehen"
+text = "dein Score"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -374,10 +374,10 @@ __meta__ = {
 }
 
 [node name="highscore" type="Label" parent="ScoreCounter"]
-margin_left = 64.0042
-margin_top = 99.8921
-margin_right = 154.004
-margin_bottom = 124.892
+margin_left = 63.8361
+margin_top = 103.137
+margin_right = 189.836
+margin_bottom = 138.137
 rect_pivot_offset = Vector2( 58.3296, 13.9885 )
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -418,6 +418,32 @@ custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "PartyHat Anzahl"
 script = ExtResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="ScoreCounter"]
+margin_left = 64.405
+margin_top = 73.5509
+margin_right = 470.405
+margin_bottom = 108.551
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Time: 23:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TrainLeaves" type="Label" parent="ScoreCounter"]
+modulate = Color( 0.345098, 0.847059, 0.341176, 1 )
+margin_left = 62.9056
+margin_top = 132.436
+margin_right = 356.906
+margin_bottom = 167.436
+rect_pivot_offset = Vector2( 58.3296, 13.9885 )
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Train leaves at 23:48"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -486,9 +512,9 @@ rect = Rect2( 0, 0, 1280, 1440 )
 material = SubResource( 23 )
 anchor_top = 0.00277778
 anchor_bottom = 0.00277778
-margin_top = -4.0
+margin_top = 4.48529
 margin_right = 1280.0
-margin_bottom = 1436.0
+margin_bottom = 1444.49
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false

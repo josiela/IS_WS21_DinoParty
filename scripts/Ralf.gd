@@ -19,7 +19,7 @@ var wallJumpForce=500
 var justWallJumped= false
 var setHighscore = true
 
-var movement= Vector2(450,0)
+var movement= Vector2(475,0)
 const jumpforce= -1300
 
 # Vars about score
@@ -36,11 +36,8 @@ func _physics_process(delta):
 	
 	var koords=get_position()
 															#Score zählen und Pausieren
-	if(koords.x<=oldX ):
-		emit_signal("dontUpdateScorePlease")
-	else:
-		emit_signal("updateScorePlease")
-		oldX=koords.x
+	emit_signal("updateScorePlease")
+	oldX=koords.x
 	
 		
 	if(lifespan>0):
@@ -56,7 +53,7 @@ func _physics_process(delta):
 			_animated_sprite.play("Hat3_Run")
 		
 		if movement.x == 0 :
-			movement.x = 450
+			movement.x = 475
 		
 		if(nextToWall() and not is_on_floor() and not Input.is_action_just_pressed("jump") and movement.y>0   ):
 			print(movement.y)
@@ -90,7 +87,7 @@ func _physics_process(delta):
 
 	
 		if (is_on_floor() && direction==-1):
-			movement.x=450
+			movement.x=475
 			$AnimatedSprite.flip_h=false
 			
 			

@@ -11,7 +11,7 @@ func _ready():
 		self.highscore = save_data.get_var()
 		save_data.close()
 		
-	$CenterContainer/VBoxContainer/CenterContainer3/highscore.text= "Highscore: " + String(highscore)
+	$CenterContainer/VBoxContainer/CenterContainer3/highscore.text= "Highscore: " + String(highscore+" minutes")
 	if highscore<=48:
 		LevelState.level1 = false
 		$CenterContainer/VBoxContainer/CenterContainer.visible=false

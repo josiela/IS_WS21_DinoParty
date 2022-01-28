@@ -3,6 +3,8 @@ extends Node
 const SAVE_FILE_PATH = "user://savedata.save"
 
 var highscore = 0
+var hour=23
+var showablehighscore
 
 onready var Level1 = get_node("LevelDesign")
 onready var Level2 = get_node("2ndLevel")
@@ -11,14 +13,24 @@ onready var Level2 = get_node("2ndLevel")
 # var b = "text"
 func _ready():
 	self.load_highscore()
-	if highscore <= 48 && highscore > 0:
-		LevelState.level1=false
-	print(LevelState.level1)
+	#if highscore <= 48 && highscore > 0:
+	#	LevelState.level1=false
+	#print(LevelState.level1)
+	
 	if LevelState.level1:
 		Level2.queue_free()
 	else:
 		Level1.queue_free()
-	$ScoreCounter/highscore.text= "Best time: " + String(highscore)
+	# Highscore in Uhrzeit umrechnen
+	showablehighscore=highscore
+	while(showablehighscore>60):
+		hour+=1
+		showablehighscore-=60
+	if(hour>24):
+		hour-=24
+	
+		
+	$ScoreCounter/highscore.text= "Best time " +String(hour)+": " +String(showablehighscore)
 
 func setHighscore(score):
 	if score < self.highscore:
