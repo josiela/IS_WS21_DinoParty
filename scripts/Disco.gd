@@ -6,6 +6,7 @@ export (String, FILE) var endScreen_path = ""
 # var a = 2
 # var b = "text"
 
+onready var score = get_node("/root/World/ScoreCounter/ScoreField/Text")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +14,9 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if get_tree().change_scene(endScreen_path) != OK:
+	print("hit goal")
+	print("Hier ist der Score (Disco-Script)")
+	print(score)
+	#if get_tree().change_scene(endScreen_path) != OK:
 		# Error handling
-		print("Error: Unavailable endszene")
+		#print("Error: Unavailable endszene")

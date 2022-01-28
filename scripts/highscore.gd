@@ -8,11 +8,12 @@ var highscore = 0
 # var a = 2
 # var b = "text"
 func _ready():
+	
 	self.load_highscore()
-	$ScoreCounter/highscore.text= "Highscore: " + String(highscore)
+	$ScoreCounter/highscore.text= "Best time: " + String(highscore)
 
 func setHighscore(score):
-	if score > self.highscore:
+	if score < self.highscore:
 		highscore = score
 		self.save_highscore()
 		

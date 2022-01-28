@@ -12,7 +12,7 @@ func _ready():
 		save_data.close()
 		
 	$CenterContainer/VBoxContainer/CenterContainer3/highscore.text= "Highscore: " + String(highscore)
-	if highscore<=46:
+	if highscore<=48:
 		$CenterContainer/VBoxContainer/CenterContainer.visible=false
 		$CenterContainer/VBoxContainer/CenterContainer2.visible=false
 	else:

@@ -107,15 +107,6 @@ func _physics_process(delta):
 		
 		
 	if(lifespan==0):
-		#read score var from /Canvaslayer and give it to highscore
-		if setHighscore:
-			var scoreCounter = get_node("/root/World/ScoreCounter/")
-			var score = scoreCounter.get("scoreEasy")
-			var highscore = get_node("/root/World")
-			highscore.setHighscore(score)
-			setHighscore = false
-			
-	
 		emit_signal("ralf_died")
 		_animated_sprite.play("Hit")
 		if Input.is_action_just_pressed("jump"):
@@ -160,6 +151,11 @@ func _on_PartyHat1_area_exited(area):
 	pass # Replace with function body.
 
 func _on_Area2D_area_entered(area):
+	#read score var from /Canvaslayer and give it to highscore
+	var scoreCounter = get_node("/root/World/ScoreCounter/")
+	var score = scoreCounter.get("scoreEasy")
+	var highscore = get_node("/root/World")
+	highscore.setHighscore(score)
 	if get_tree().change_scene(endScreen_path) != OK:
 		# Error handling
 		print("Error: Unavailable endszene")
