@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Graphics/FloorPiece150.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/1154915.png" type="Texture" id=2]
+[ext_resource path="res://PixelFont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Graphics/roundarrow.png" type="Texture" id=7]
 [ext_resource path="res://Szenes/Collectables/PartyUtils.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Szenes/Enemies/TrafficCone.tscn" type="PackedScene" id=9]
@@ -32,7 +33,7 @@ position = Vector2( 1441.89, 550.718 )
 position = Vector2( 1098.16, 555.56 )
 
 [node name="Ground" parent="." instance=ExtResource( 10 )]
-position = Vector2( 851.958, 717.723 )
+position = Vector2( 904.28, 720.477 )
 
 [node name="Ground2" type="StaticBody2D" parent="."]
 position = Vector2( 2153.06, 717.723 )
@@ -96,6 +97,19 @@ position = Vector2( 3710.47, 429.196 )
 [node name="PartyUtil" parent="." instance=ExtResource( 8 )]
 position = Vector2( 3504.71, 555.442 )
 
+[node name="ScoreField" type="Label" parent="PartyUtil"]
+margin_left = 48.0945
+margin_top = -31.309
+margin_right = 454.094
+margin_bottom = 3.69101
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-3 Sek"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Ground4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 5254.57, 724.043 )
 
@@ -154,6 +168,19 @@ position = Vector2( 8849.95, 717.301 )
 
 [node name="Node2D" parent="." instance=ExtResource( 8 )]
 position = Vector2( 6602.96, 568.897 )
+
+[node name="ScoreField" type="Label" parent="Node2D"]
+margin_left = 39.1389
+margin_top = -16.8943
+margin_right = 445.139
+margin_bottom = 18.1057
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-3 Sek"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Node2D2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 8477.44, 426.146 )
@@ -350,6 +377,19 @@ shape = SubResource( 4 )
 
 [node name="PartyUtils6" parent="." instance=ExtResource( 8 )]
 position = Vector2( 7550.31, 483.459 )
+
+[node name="ScoreField" type="Label" parent="PartyUtils6"]
+margin_left = 60.761
+margin_top = -31.309
+margin_right = 466.761
+margin_bottom = 3.69101
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "-3 Sek"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="JumpArrow" type="Sprite" parent="."]
 position = Vector2( 1825.24, 440.837 )
