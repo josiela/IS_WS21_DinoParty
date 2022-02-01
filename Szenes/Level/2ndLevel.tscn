@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Graphics/FloorPiece150.png" type="Texture" id=5]
@@ -14,19 +14,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 84.954, 123.532 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 72.6709, 120.862 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 50.2656, 87.6733 )
-
 [node name="2ndLevel" type="Node"]
 
 [node name="smallGround4" parent="." instance=ExtResource( 12 )]
 position = Vector2( 6879.86, 577.035 )
-
-[node name="HighLevelSolid3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 5838.96, 454.086 )
 
 [node name="smallGround5" parent="." instance=ExtResource( 12 )]
 position = Vector2( 7315.54, 479.006 )
@@ -82,22 +73,10 @@ shape = SubResource( 1 )
 position = Vector2( 5729.27, 768.518 )
 
 [node name="Ground3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 8921.75, 732.964 )
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2( 5504.98, 401.899 )
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D4"]
-position = Vector2( 11.1049, -0.575943 )
-scale = Vector2( 0.987662, 1.12016 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2( 11.2427, -0.799042 )
-shape = SubResource( 2 )
+position = Vector2( 8921.75, 730.359 )
 
 [node name="PartyUtils3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 5404.76, 211.672 )
+position = Vector2( 5581.26, 293.175 )
 
 [node name="ScoreField2" type="Label" parent="PartyUtils3"]
 margin_left = 34.1304
@@ -113,13 +92,7 @@ __meta__ = {
 }
 
 [node name="TrafficCone2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 5123.47, 606.341 )
-
-[node name="TrafficCone3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 5745.72, 127.441 )
-
-[node name="TrafficCone4" parent="." instance=ExtResource( 10 )]
-position = Vector2( 5932.35, 404.809 )
+position = Vector2( 5442.18, 594.535 )
 
 [node name="TrafficCone5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 6383.23, 606.906 )
@@ -152,19 +125,19 @@ position = Vector2( 8703.89, 570.228 )
 position = Vector2( 8903.43, 454.449 )
 
 [node name="TrafficCone8" parent="." instance=ExtResource( 10 )]
-position = Vector2( 9459.75, 570.464 )
+position = Vector2( 9542.69, 564.935 )
 
 [node name="Ground5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 10628, 731.027 )
+position = Vector2( 10628, 730.359 )
 
 [node name="PartyUtils5" parent="." instance=ExtResource( 6 )]
 position = Vector2( 10100.4, 516.057 )
 
 [node name="TrafficCone9" parent="." instance=ExtResource( 10 )]
-position = Vector2( 9704.74, 566.379 )
+position = Vector2( 9844.35, 564.997 )
 
 [node name="TrafficCone10" parent="." instance=ExtResource( 10 )]
-position = Vector2( 9201.95, 570.444 )
+position = Vector2( 9219.61, 570.444 )
 
 [node name="smallGround" parent="." instance=ExtResource( 12 )]
 position = Vector2( 10667.2, 521.461 )
@@ -185,7 +158,7 @@ position = Vector2( 13533.2, 564.969 )
 position = Vector2( 12983.5, 727.972 )
 
 [node name="Ground7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 14691.6, 728.115 )
+position = Vector2( 14691.6, 727.972 )
 
 [node name="TrafficCone14" parent="." instance=ExtResource( 10 )]
 position = Vector2( 13989.1, 567.177 )
@@ -200,19 +173,22 @@ position = Vector2( 14629.3, 563.667 )
 position = Vector2( 10966.8, 158.639 )
 
 [node name="PartyHat3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 11229.2, 532.725 )
+position = Vector2( 11343.7, 535.162 )
 
 [node name="smallGround2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 10970.2, 245.342 )
+
+[node name="smallGround8" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5936.34, 400.325 )
 
 [node name="HighLevelSolid5" parent="." instance=ExtResource( 13 )]
 position = Vector2( 15307.8, 526.84 )
 
 [node name="smallGround3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 15712.8, 336.448 )
+position = Vector2( 15709.2, 318.601 )
 
 [node name="LowLevel" parent="." instance=ExtResource( 11 )]
-position = Vector2( 15347.2, 265.345 )
+position = Vector2( 15349, 247.498 )
 
 [node name="HighLevelSolid6" parent="." instance=ExtResource( 13 )]
 position = Vector2( 15729.4, 74.49 )
@@ -224,10 +200,13 @@ position = Vector2( 15581.1, -8.87018 )
 position = Vector2( 15823.7, 31.9638 )
 
 [node name="PartyHat4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 15690.7, 254.118 )
+position = Vector2( 15730, 223.777 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 15730, 223.777 )
 
 [node name="Ground8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 16399.7, 728.47 )
+position = Vector2( 16399.7, 727.972 )
 
 [node name="TrafficCone17" parent="." instance=ExtResource( 10 )]
 position = Vector2( 16351, 553.866 )
@@ -236,7 +215,7 @@ position = Vector2( 16351, 553.866 )
 position = Vector2( 16538.5, 517.238 )
 
 [node name="Ground9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18300.5, 721.488 )
+position = Vector2( 18300.5, 727.972 )
 
 [node name="PartyUtils10" parent="." instance=ExtResource( 6 )]
 position = Vector2( 17410.2, 658.284 )
@@ -256,20 +235,8 @@ texture = ExtResource( 5 )
 position = Vector2( 0, 0.876099 )
 shape = SubResource( 1 )
 
-[node name="groundblock" type="StaticBody2D" parent="."]
-position = Vector2( 13.1357, -88.4485 )
-
-[node name="Sprite" type="Sprite" parent="groundblock"]
-position = Vector2( 5729.77, 349.843 )
-scale = Vector2( 0.658011, 0.823454 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="groundblock"]
-position = Vector2( 5730.8, 349.147 )
-shape = SubResource( 3 )
-
 [node name="PartyUtils11" parent="." instance=ExtResource( 6 )]
-position = Vector2( 922.395, 556.407 )
+position = Vector2( 1716.6, 629.581 )
 
 [node name="ScoreField3" type="Label" parent="PartyUtils11"]
 margin_left = 37.633

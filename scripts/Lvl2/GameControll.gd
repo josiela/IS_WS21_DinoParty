@@ -1,9 +1,9 @@
 extends Node
 
-const SAVE_FILE_PATH = "user://savedata.save"
+const Level2Highscore = "user://Level2Highscore.save"
 
 var highscore = 0
-var hour=23
+onready var hour = LevelState.hour
 var showablehighscore
 # Declare member variables here. Examples:
 # var a = 2
@@ -19,7 +19,7 @@ func _ready():
 		hour-=24
 	
 		
-	$ScoreCounter/highscore.text= "Best time " +String(hour)+": " +String(showablehighscore)
+	$ScoreCounter/highscore.text= "Best time " + String(highscore) + " minutes"
 
 func setHighscore(score):
 	if highscore!=0:
@@ -32,13 +32,13 @@ func setHighscore(score):
 		
 func save_highscore():
 	var save_data = File.new()
-	save_data.open(SAVE_FILE_PATH, File.WRITE)
+	save_data.open(Level2Highscore, File.WRITE)
 	save_data.store_var(self.highscore)
 	save_data.close()
 
 func load_highscore():
 	var save_data = File.new()
-	if save_data.file_exists(SAVE_FILE_PATH):
-		save_data.open(SAVE_FILE_PATH, File.READ)
+	if save_data.file_exists(Level2Highscore):
+		save_data.open(Level2Highscore, File.READ)
 		self.highscore = save_data.get_var()
 		save_data.close() 

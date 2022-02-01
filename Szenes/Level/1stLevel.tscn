@@ -231,13 +231,13 @@ position = Vector2( 11169.1, 554.03 )
 position = Vector2( 12470.1, 717.301 )
 
 [node name="HighLevelSolid3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 12294.7, 414.654 )
+position = Vector2( 12287, 395.912 )
 
 [node name="HighLevelSolid4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 12279.1, 226.061 )
+position = Vector2( 12279.1, 202.207 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2( 11936.2, 301.868 )
+position = Vector2( 11923.4, 318.055 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D5"]
 position = Vector2( 0, 9.62756 )
@@ -249,7 +249,7 @@ position = Vector2( 0.87793, 12.2885 )
 shape = SubResource( 4 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2( 11936.2, 56.3147 )
+position = Vector2( 11923.4, 72.5013 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D6"]
 position = Vector2( 0.208725, 12.3484 )
@@ -261,10 +261,10 @@ position = Vector2( 1.71191, 11.4544 )
 shape = SubResource( 4 )
 
 [node name="PartyUtils4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 12374.4, 357.804 )
+position = Vector2( 12284.9, 335.654 )
 
 [node name="PartyHad3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 12310.7, 156.313 )
+position = Vector2( 12278.3, 136.719 )
 
 [node name="HighLevelSolid5" parent="." instance=ExtResource( 13 )]
 position = Vector2( 13041.7, 518.624 )
@@ -294,10 +294,10 @@ position = Vector2( 14452.8, 423.274 )
 position = Vector2( 16049.4, 711.589 )
 
 [node name="HighLevelSolid7" parent="." instance=ExtResource( 13 )]
-position = Vector2( 15350.3, 372.172 )
+position = Vector2( 15337.3, 355.419 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="."]
-position = Vector2( 14959, 278.774 )
+position = Vector2( 14947.7, 273.13 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D7"]
 position = Vector2( 0.852734, 10.4605 )
@@ -309,7 +309,7 @@ position = Vector2( 0.87793, 12.2885 )
 shape = SubResource( 4 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="."]
-position = Vector2( 14959, 29.8844 )
+position = Vector2( 14947.7, 24.2404 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D8"]
 position = Vector2( 0, 12.5526 )
@@ -321,7 +321,7 @@ position = Vector2( 0.87793, 12.2885 )
 shape = SubResource( 4 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="."]
-position = Vector2( 14959.6, -215.998 )
+position = Vector2( 14948.3, -221.642 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D9"]
 position = Vector2( 0, 11.9397 )
@@ -333,7 +333,7 @@ position = Vector2( 0.87793, 12.2885 )
 shape = SubResource( 4 )
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="."]
-position = Vector2( 15291, 99.694 )
+position = Vector2( 15277, 84.8021 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D10"]
 position = Vector2( 0.863426, 12.3038 )

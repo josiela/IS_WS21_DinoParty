@@ -1,24 +1,22 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=47 format=2]
 
-[ext_resource path="res://Szenes/Level/2ndLevel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Graphics/BackgroundCity.png" type="Texture" id=2]
-[ext_resource path="res://scripts/Ralf.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Lvl2/GameControll.gd" type="Script" id=1]
+[ext_resource path="res://Szenes/Level/2ndLevel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Lvl2/Ralf.gd" type="Script" id=3]
 [ext_resource path="res://ParallaxBackground.gd" type="Script" id=4]
-[ext_resource path="res://Graphics/Disco-2.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/ClubFront1.png" type="Texture" id=5]
 [ext_resource path="res://VHS.shader" type="Shader" id=6]
 [ext_resource path="res://Graphics/Collectable.png" type="Texture" id=7]
-[ext_resource path="res://scripts/highscore.gd" type="Script" id=8]
+[ext_resource path="res://scripts/Lvl2/CanvasLayer.gd" type="Script" id=8]
 [ext_resource path="res://scripts/DeathText.gd" type="Script" id=9]
 [ext_resource path="res://Graphics/CityBackground2560.png" type="Texture" id=10]
 [ext_resource path="res://TV.shader" type="Shader" id=11]
-[ext_resource path="res://Graphics/ClubFront2.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/BackgroundCity.png" type="Texture" id=12]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2_3Hats.png" type="Texture" id=13]
-[ext_resource path="res://scripts/CanvasLayer.gd" type="Script" id=14]
 [ext_resource path="res://Graphics/DinoParty_SpritesDefault.png" type="Texture" id=15]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2_2Hats.png" type="Texture" id=16]
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=17]
 [ext_resource path="res://scripts/Disco.gd" type="Script" id=18]
-[ext_resource path="res://Graphics/ClubFront1.png" type="Texture" id=19]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2.png" type="Texture" id=21]
 [ext_resource path="res://Graphics/SkyBackgroundGradient1280x1440.png" type="Texture" id=22]
 [ext_resource path="res://Music/dino_bgm.ogg" type="AudioStream" id=26]
@@ -42,73 +40,73 @@ region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 0, 0, 187, 250 )
+atlas = ExtResource( 13 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 300 )
+atlas = ExtResource( 13 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 187, 0, 187, 300 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 374, 0, 187, 300 )
+atlas = ExtResource( 21 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 187, 300 )
+atlas = ExtResource( 15 )
+region = Rect2( 561, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 13 )
-region = Rect2( 187, 0, 187, 300 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 374, 0, 187, 300 )
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 13 )
-region = Rect2( 561, 0, 187, 300 )
+region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 187, 300 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 21 )
-region = Rect2( 187, 0, 187, 300 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 374, 0, 187, 300 )
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 561, 0, 187, 300 )
+atlas = ExtResource( 16 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 561, 0, 187, 250 )
+atlas = ExtResource( 16 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="SpriteFrames" id=19]
 animations = [ {
@@ -117,72 +115,64 @@ animations = [ {
 "name": "Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ) ],
-"loop": true,
-"name": "Stand",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 6 ) ],
-"loop": true,
-"name": "Hat2_Hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "Hat2_Run",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 9 ) ],
-"loop": true,
-"name": "Stand_Hat2",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "Hat3_Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ) ],
+"frames": [ SubResource( 7 ) ],
 "loop": true,
-"name": "Hat3_Hit",
+"name": "Hat2_Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 13 ) ],
-"loop": true,
-"name": "Stand_Hat3",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 14 ) ],
-"loop": true,
-"name": "Stand_Hat",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ) ],
-"loop": true,
-"name": "Hat_Run",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 17 ) ],
+"frames": [ SubResource( 8 ) ],
 "loop": true,
 "name": "Hat_Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 18 ) ],
+"frames": [ SubResource( 9 ) ],
 "loop": true,
 "name": "Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "Hat3_Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ) ],
+"loop": true,
+"name": "Stand",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "Stand_Hat3",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "Stand_Hat",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "Hat_Run",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
+"loop": true,
+"name": "Stand_Hat2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "Hat2_Run",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 109.072, 144.326 )
-
-[sub_resource type="SpriteFrames" id=25]
-animations = [ {
-"frames": [ ExtResource( 19 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "default",
-"speed": 1.0
-} ]
+extents = Vector2( 47.4751, 41.6222 )
 
 [sub_resource type="StyleBoxFlat" id=21]
 bg_color = Color( 0, 0, 0, 0 )
@@ -209,11 +199,14 @@ shader_param/horzFuzzOpt = 0.0
 extents = Vector2( 8304.72, 111.832 )
 
 [node name="World" type="Node2D"]
-script = ExtResource( 8 )
+position = Vector2( 3.63696, -3.63684 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -602.085 ],
 "_edit_vertical_guides_": [ 4931.06, 1349.83 ]
 }
+
+[node name="2ndLevel" parent="." instance=ExtResource( 2 )]
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -226,7 +219,6 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
-endScreen_path = "res://EndScreen.tscn"
 
 [node name="Area2D" type="Area2D" parent="Ralf"]
 
@@ -287,31 +279,25 @@ enabled = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ralf"]
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 18145.1, 165.133 )
+position = Vector2( 24832.1, 472.913 )
+scale = Vector2( 1.79124, 2.82024 )
 collision_layer = 130
 script = ExtResource( 18 )
 endScreen_path = "res://EndScreen.tscn"
 
-[node name="Disco" type="Sprite" parent="Area2D"]
-visible = false
-position = Vector2( -3558.91, -68.3189 )
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( -3492.09, -88.3909 )
+scale = Vector2( 0.416491, 0.326956 )
+z_index = 1
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -191.943, 285.105 )
+position = Vector2( -3569.56, 4.45207 )
 z_index = 1
 shape = SubResource( 20 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
-position = Vector2( -22.0488, 49.7275 )
-scale = Vector2( 0.900781, 0.900781 )
-frames = SubResource( 25 )
-frame = 1
-
-[node name="2ndLevel" parent="." instance=ExtResource( 1 )]
-
 [node name="ScoreCounter" type="CanvasLayer" parent="."]
-script = ExtResource( 14 )
+script = ExtResource( 8 )
 
 [node name="Panel" type="Panel" parent="ScoreCounter"]
 margin_left = 56.263
@@ -324,13 +310,13 @@ __meta__ = {
 }
 
 [node name="ScoreField" type="Label" parent="ScoreCounter"]
-margin_left = 64.2943
-margin_top = 75.5378
-margin_right = 354.294
-margin_bottom = 109.538
+margin_left = 175.672
+margin_top = 74.1172
+margin_right = 581.672
+margin_bottom = 109.117
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Hier sollte dein Score stehen"
+text = "dein Score"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -372,10 +358,10 @@ __meta__ = {
 }
 
 [node name="highscore" type="Label" parent="ScoreCounter"]
-margin_left = 64.0042
-margin_top = 99.8921
-margin_right = 154.004
-margin_bottom = 124.892
+margin_left = 63.8361
+margin_top = 103.137
+margin_right = 189.836
+margin_bottom = 138.137
 rect_pivot_offset = Vector2( 58.3296, 13.9885 )
 custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -416,6 +402,46 @@ custom_fonts/font = ExtResource( 17 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "PartyHat Anzahl"
 script = ExtResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="ScoreCounter"]
+margin_left = 64.405
+margin_top = 73.5509
+margin_right = 470.405
+margin_bottom = 108.551
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Time: 23:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TrainLeaves" type="Label" parent="ScoreCounter"]
+modulate = Color( 0.345098, 0.847059, 0.341176, 1 )
+margin_left = 63.0
+margin_top = 132.0
+margin_right = 311.0
+margin_bottom = 167.0
+rect_pivot_offset = Vector2( 58.3296, 13.9885 )
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Admission ends in"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EntranceEnd" type="Label" parent="ScoreCounter"]
+modulate = Color( 0.345098, 0.847059, 0.341176, 1 )
+margin_left = 318.0
+margin_top = 133.0
+margin_right = 467.0
+margin_bottom = 168.0
+rect_pivot_offset = Vector2( 58.3296, 13.9885 )
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "50 minutes"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -484,9 +510,9 @@ rect = Rect2( 0, 0, 1280, 1440 )
 material = SubResource( 23 )
 anchor_top = 0.00277778
 anchor_bottom = 0.00277778
-margin_top = -4.0
+margin_top = 4.48529
 margin_right = 1280.0
-margin_bottom = 1436.0
+margin_bottom = 1444.49
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -516,7 +542,7 @@ scroll_base_scale = Vector2( 0.4, 1 )
 motion_mirroring = Vector2( 2561, 0 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
-texture = ExtResource( 2 )
+texture = ExtResource( 12 )
 centered = false
 offset = Vector2( 0, -720 )
 
@@ -533,7 +559,7 @@ centered = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 26 )
-volume_db = -6.0
+volume_db = -12.0
 autoplay = true
 
 [node name="FallTracker" type="Area2D" parent="."]

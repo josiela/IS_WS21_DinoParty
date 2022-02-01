@@ -35,7 +35,7 @@ func _ready():
 func _physics_process(delta):
 	
 	var koords=get_position()
-															#Score zählen und Pausieren
+	#Score zählen und Pausieren
 	emit_signal("updateScorePlease")
 	oldX=koords.x
 	
@@ -107,10 +107,7 @@ func _physics_process(delta):
 		emit_signal("ralf_died")
 		_animated_sprite.play("Hit")
 		if Input.is_action_just_pressed("jump"):
-			if LevelState.level1:
-				get_tree().change_scene("res://ParallaxTestScene.tscn")
-			else:
-				get_tree().change_scene("res://Level2Scene.tscn")
+			get_tree().change_scene("res://Level2Scene.tscn")
 			
 	
 
@@ -149,16 +146,16 @@ func hitCone():
 func _on_Area2D_area_entered(area):
 	#read score var from /Canvaslayer and give it to highscore
 	var scoreCounter = get_node("/root/World/ScoreCounter/")
-	var score = scoreCounter.get("scoreEasyShowable")
+	var calculatedScore = scoreCounter.get("scoreEasyShowable")
+	var score = scoreCounter.get("scoreEasy")
 	var highscore = get_node("/root/World")
 	LevelState.score = score
-	highscore.setHighscore(score)
-	if score <= 48:
-		LevelState.level1 = false
 	LevelState.hour = highscore.hour
-	if get_tree().change_scene(endScreen_path) != OK:
-		# Error handling
-		print("Error: Unavailable endszene")
+	highscore.setHighscore(score)
+	print(score)
+	if score <= 110:
+		LevelState.level2solved = true
+	get_tree().change_scene("res://EndScreenLvl2.tscn")
 		
 
 func _on_FallTracker_area_entered(area):

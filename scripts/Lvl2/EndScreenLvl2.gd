@@ -1,6 +1,6 @@
 extends MarginContainer
 
-const SAVE_FILE_PATH = "user://savedata.save"
+const SAVE_FILE_PATH = "user://Level2Highscore.save"
 var highscore = 0
 var score = 0
 
@@ -13,8 +13,7 @@ func _ready():
 		
 	$CenterContainer/VBoxContainer/CenterContainer4/score.text= "Score: " + String(LevelState.score) + " minutes"
 	$CenterContainer/VBoxContainer/CenterContainer3/highscore.text= "Highscore: " + String(highscore) + " minutes"
-	if LevelState.score<=50:
-		LevelState.level1 = false
+	if LevelState.level2solved:
 		$CenterContainer/VBoxContainer/CenterContainer.visible=false
 		$CenterContainer/VBoxContainer/CenterContainer2.visible=false
 	else:
@@ -24,7 +23,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("jump"):
-		if LevelState.level1:
+		if LevelState.level2solved:
 			get_tree().change_scene("res://ParallaxTestScene.tscn")
 		else:
 			get_tree().change_scene("res://Level2Scene.tscn")
