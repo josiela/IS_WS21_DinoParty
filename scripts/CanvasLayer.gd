@@ -17,7 +17,7 @@ func _ready():
 	$PartyhatAnzahl.text=String(partyHatCounter)
 	Signals.connect("collectedPartyHat", self, "collectedPartyHat")
 	Signals.connect("hitCone", self, "hitCone")
-	$Time.text=("Time 23:0")
+	$Time.text=("Time 22:0")
 	
 
 func _physics_process(delta):
@@ -27,15 +27,15 @@ func _physics_process(delta):
 	#About a cool score
 	
 	if(59>scoreEasy  ):
-		$Time.text=("Time 23:")
+		$Time.text=("Time 22:")
 	if(120>scoreEasy and scoreEasy>59 ):
-		$Time.text=("Time 24:")
+		$Time.text=("Time 23:")
 	if(180>scoreEasy and scoreEasy>119 ):
-		$Time.text=("Time 01:")
+		$Time.text=("Time 24:")
 	if(240>scoreEasy and scoreEasy>179 ):
-		$Time.text=("Time 02:")
+		$Time.text=("Time 01:")
 	if(scoreEasy>239 ):
-		$Time.text=("Time 03:")
+		$Time.text=("Time 02:")
 	if(scoreEasyShowable==60):
 		scoreEasyShowable=0
 	if(partyHatCounter==0):

@@ -19,7 +19,7 @@ func _ready():
 		hour-=24
 	
 		
-	$ScoreCounter/highscore.text= "Best time " + String(highscore) + " minutes"
+	$ScoreCounter/highscore.text= "Best time " + String(hour)+":"+ String(showablehighscore) + " minutes"
 
 func setHighscore(score):
 	if highscore!=0:

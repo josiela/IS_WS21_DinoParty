@@ -3,7 +3,7 @@ extends Node
 const SAVE_FILE_PATH = "user://savedata.save"
 
 var highscore = 0
-var hour=23
+var hour=22
 var showablehighscore
 # Declare member variables here. Examples:
 # var a = 2
