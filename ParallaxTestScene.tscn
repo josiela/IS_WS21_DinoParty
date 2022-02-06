@@ -1,10 +1,9 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Szenes/Level/1stLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sounds/jump.wav" type="AudioStream" id=2]
 [ext_resource path="res://scripts/Ralf.gd" type="Script" id=3]
 [ext_resource path="res://ParallaxBackground.gd" type="Script" id=4]
-[ext_resource path="res://Graphics/ClubFront1.png" type="Texture" id=5]
 [ext_resource path="res://VHS.shader" type="Shader" id=6]
 [ext_resource path="res://Graphics/Collectable.png" type="Texture" id=7]
 [ext_resource path="res://scripts/highscore.gd" type="Script" id=8]
@@ -17,7 +16,6 @@
 [ext_resource path="res://Graphics/DinoParty_SpritesDefault.png" type="Texture" id=15]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2_2Hats.png" type="Texture" id=16]
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=17]
-[ext_resource path="res://scripts/Disco.gd" type="Script" id=18]
 [ext_resource path="res://Sounds/fall1_ogg.ogg" type="AudioStream" id=19]
 [ext_resource path="res://Sounds/hit.wav" type="AudioStream" id=20]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2.png" type="Texture" id=21]
@@ -45,73 +43,73 @@ region = Rect2( 374, 0, 187, 250 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 561, 0, 187, 300 )
+atlas = ExtResource( 13 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 187, 300 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 21 )
-region = Rect2( 187, 0, 187, 300 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 374, 0, 187, 300 )
+atlas = ExtResource( 13 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 13 )
-region = Rect2( 561, 0, 187, 300 )
+region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 561, 0, 187, 250 )
+atlas = ExtResource( 21 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 187, 0, 187, 300 )
+atlas = ExtResource( 21 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 13 )
-region = Rect2( 374, 0, 187, 300 )
+atlas = ExtResource( 16 )
+region = Rect2( 187, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 187, 300 )
+atlas = ExtResource( 16 )
+region = Rect2( 374, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 561, 0, 187, 300 )
-
-[sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 15 )
 region = Rect2( 0, 0, 187, 250 )
 
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 561, 0, 187, 250 )
+
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 16 )
-region = Rect2( 187, 0, 187, 300 )
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 374, 0, 187, 300 )
+region = Rect2( 0, 0, 187, 300 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 16 )
-region = Rect2( 0, 0, 187, 300 )
+region = Rect2( 561, 0, 187, 300 )
 
 [sub_resource type="SpriteFrames" id=19]
 animations = [ {
@@ -120,76 +118,73 @@ animations = [ {
 "name": "Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ) ],
-"loop": true,
-"name": "Hat2_Hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 6 ) ],
-"loop": true,
-"name": "Stand_Hat3",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "Hat_Run",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 9 ) ],
-"loop": true,
-"name": "Hat3_Hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 10 ) ],
-"loop": true,
-"name": "Hit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "Hat3_Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 13 ) ],
-"loop": true,
-"name": "Stand_Hat",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 14 ) ],
+"frames": [ SubResource( 7 ) ],
 "loop": true,
 "name": "Hat_Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ) ],
+"frames": [ SubResource( 8 ) ],
 "loop": true,
-"name": "Stand",
+"name": "Hat3_Hit",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "Stand_Hat3",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "Hat_Run",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "Hat2_Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 18 ) ],
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "Stand",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "Hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
+"loop": true,
+"name": "Stand_Hat",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 17 ) ],
 "loop": true,
 "name": "Stand_Hat2",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 18 ) ],
+"loop": true,
+"name": "Hat2_Hit",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 47.4751, 41.6222 )
-
-[sub_resource type="StyleBoxFlat" id=21]
+[sub_resource type="StyleBoxFlat" id=20]
 bg_color = Color( 0, 0, 0, 0 )
 
-[sub_resource type="ShaderMaterial" id=22]
+[sub_resource type="ShaderMaterial" id=21]
 shader = ExtResource( 6 )
 shader_param/tape_wave_amount = 0.001
 shader_param/tape_crease_amount = 0.0
 shader_param/color_displacement = 0.0
 shader_param/lines_velocity = 0.08
 
-[sub_resource type="ShaderMaterial" id=23]
+[sub_resource type="ShaderMaterial" id=22]
 render_priority = -2
 shader = ExtResource( 11 )
 shader_param/vertJerkOpt = 0.07
@@ -200,7 +195,7 @@ shader_param/scalinesOpt = 0.3
 shader_param/rgbOffsetOpt = 0.0
 shader_param/horzFuzzOpt = 0.0
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 8304.72, 111.832 )
 
 [node name="World" type="Node2D"]
@@ -306,24 +301,6 @@ volume_db = -12.0
 stream = ExtResource( 20 )
 volume_db = -12.0
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 24832.1, 472.913 )
-scale = Vector2( 1.79124, 2.82024 )
-collision_layer = 130
-script = ExtResource( 18 )
-endScreen_path = "res://EndScreen.tscn"
-
-[node name="Sprite" type="Sprite" parent="Area2D"]
-position = Vector2( -3492.09, -88.3909 )
-scale = Vector2( 0.416491, 0.326956 )
-z_index = 1
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -3569.56, 4.45207 )
-z_index = 1
-shape = SubResource( 20 )
-
 [node name="ScoreCounter" type="CanvasLayer" parent="."]
 script = ExtResource( 14 )
 
@@ -332,7 +309,7 @@ margin_left = 56.263
 margin_top = 7.7862
 margin_right = 263.263
 margin_bottom = 73.786
-custom_styles/panel = SubResource( 21 )
+custom_styles/panel = SubResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -476,7 +453,7 @@ margin_left = 534.509
 margin_top = 312.607
 margin_right = 797.509
 margin_bottom = 405.607
-custom_styles/panel = SubResource( 21 )
+custom_styles/panel = SubResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -515,7 +492,7 @@ copy_mode = 2
 rect = Rect2( 0, 0, 1280, 1440 )
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxVHSEffect/ParallaxLayer/Effects/BackBufferCopy"]
-material = SubResource( 22 )
+material = SubResource( 21 )
 margin_right = 1280.0
 margin_bottom = 1440.0
 __meta__ = {
@@ -529,7 +506,7 @@ copy_mode = 2
 rect = Rect2( 0, 0, 1280, 1440 )
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxVHSEffect/ParallaxLayer/Effects/BackBufferCopy2"]
-material = SubResource( 23 )
+material = SubResource( 22 )
 anchor_top = 0.00277778
 anchor_bottom = 0.00277778
 margin_top = 4.48529
@@ -588,7 +565,7 @@ autoplay = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallTracker"]
 position = Vector2( 9316.71, 943.356 )
-shape = SubResource( 24 )
+shape = SubResource( 23 )
 
 [connection signal="timeout" from="Timer" to="ScoreCounter" method="_on_Timer_timeout"]
 [connection signal="dontUpdateScorePlease" from="Ralf" to="ScoreCounter" method="_on_Ralf_dontUpdateScorePlease"]
@@ -596,6 +573,4 @@ shape = SubResource( 24 )
 [connection signal="ralf_died" from="Ralf" to="DeathText" method="_on_Ralf_ralf_died"]
 [connection signal="updateScorePlease" from="Ralf" to="ScoreCounter" method="_on_Ralf_updateScorePlease"]
 [connection signal="timeout" from="Ralf/Timer" to="Ralf" method="_on_Timer_timeout"]
-[connection signal="area_entered" from="Area2D" to="Ralf" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="area_entered" from="FallTracker" to="Ralf" method="_on_FallTracker_area_entered"]
