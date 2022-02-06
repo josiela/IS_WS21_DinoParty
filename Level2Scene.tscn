@@ -461,19 +461,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScoreField" type="Label" parent="ScoreCounter/EntranceEnd"]
-margin_left = 43.6521
-margin_top = -18.9684
-margin_right = 449.652
-margin_bottom = 16.0316
-rect_pivot_offset = Vector2( 56.2754, 17.7166 )
-custom_fonts/font = ExtResource( 17 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "+1 life"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="BottleSound" type="AudioStreamPlayer" parent="ScoreCounter"]
 stream = ExtResource( 14 )
 volume_db = -18.0
