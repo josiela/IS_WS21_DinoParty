@@ -64,6 +64,7 @@ func _on_Ralf_ralf_died():
 
 
 func pickedUpCollectable():
+	$BottleSound.play()
 	collectables+=1;
 	if scoreEasy <= 3:
 		scoreEasy=0;
@@ -77,6 +78,7 @@ func _on_Ralf_updateScorePlease():
 	updateScore=true
 	
 func collectedPartyHat():
+	$PartyHorn.play()
 	partyHatCounter+=1
  
 func hitCone():

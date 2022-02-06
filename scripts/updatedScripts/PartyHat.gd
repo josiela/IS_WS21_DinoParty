@@ -20,6 +20,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_PickUp_body_entered(body):
+	$PartyHorn.play()
 	print("Picked up PartyHat")
 	Signals.emit_signal("collectedPartyHat")
 	queue_free()

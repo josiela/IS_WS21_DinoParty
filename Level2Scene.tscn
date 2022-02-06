@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://scripts/Lvl2/GameControll.gd" type="Script" id=1]
 [ext_resource path="res://Szenes/Level/2ndLevel.tscn" type="PackedScene" id=2]
@@ -13,12 +13,17 @@
 [ext_resource path="res://TV.shader" type="Shader" id=11]
 [ext_resource path="res://Graphics/BackgroundCity.png" type="Texture" id=12]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2_3Hats.png" type="Texture" id=13]
+[ext_resource path="res://Sounds/bottlecap.wav" type="AudioStream" id=14]
 [ext_resource path="res://Graphics/DinoParty_SpritesDefault.png" type="Texture" id=15]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2_2Hats.png" type="Texture" id=16]
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=17]
 [ext_resource path="res://scripts/Disco.gd" type="Script" id=18]
+[ext_resource path="res://Sounds/PartyHorn.wav" type="AudioStream" id=19]
+[ext_resource path="res://Sounds/jump.wav" type="AudioStream" id=20]
 [ext_resource path="res://Graphics/DinoParty_SpritesHatVersion2.png" type="Texture" id=21]
 [ext_resource path="res://Graphics/SkyBackgroundGradient1280x1440.png" type="Texture" id=22]
+[ext_resource path="res://Sounds/fall1_ogg.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Sounds/hit.wav" type="AudioStream" id=24]
 [ext_resource path="res://Music/dino_bgm.ogg" type="AudioStream" id=26]
 [ext_resource path="res://Graphics/PartyHat.png" type="Texture" id=28]
 [ext_resource path="res://PartyhatAnzahl.gd" type="Script" id=29]
@@ -276,7 +281,17 @@ rotation = 1.5708
 scale = Vector2( -3.90513, 6.28752 )
 enabled = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ralf"]
+[node name="SoundJump" type="AudioStreamPlayer" parent="Ralf"]
+stream = ExtResource( 20 )
+volume_db = -24.0
+
+[node name="SoundFall" type="AudioStreamPlayer" parent="Ralf"]
+stream = ExtResource( 23 )
+volume_db = -12.0
+
+[node name="SoundHit" type="AudioStreamPlayer" parent="Ralf"]
+stream = ExtResource( 24 )
+volume_db = -12.0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 24832.1, 472.913 )
@@ -445,6 +460,27 @@ text = "50 minutes"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ScoreField" type="Label" parent="ScoreCounter/EntranceEnd"]
+margin_left = 43.6521
+margin_top = -18.9684
+margin_right = 449.652
+margin_bottom = 16.0316
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "+1 life"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottleSound" type="AudioStreamPlayer" parent="ScoreCounter"]
+stream = ExtResource( 14 )
+volume_db = -18.0
+
+[node name="PartyHorn" type="AudioStreamPlayer" parent="ScoreCounter"]
+stream = ExtResource( 19 )
+volume_db = -24.0
 
 [node name="DeathText" type="CanvasLayer" parent="."]
 script = ExtResource( 9 )

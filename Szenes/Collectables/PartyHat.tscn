@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Graphics/PartyHat.png" type="Texture" id=1]
 [ext_resource path="res://scripts/updatedScripts/PartyHat.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/PartyHorn.wav" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 24.4002
@@ -18,6 +19,10 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="PartyHorn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -12.0
 
 [connection signal="body_entered" from="PickUp" to="." method="_on_PickUp_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

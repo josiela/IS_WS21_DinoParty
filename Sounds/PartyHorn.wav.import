@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PartyHorn.wav-4bba4e709aa0795e33b888668adea029.sample"
+
+[deps]
+
+source_file="res://Sounds/PartyHorn.wav"
+dest_files=[ "res://.import/PartyHorn.wav-4bba4e709aa0795e33b888668adea029.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

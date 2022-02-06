@@ -65,6 +65,7 @@ func _physics_process(delta):
 			if(is_on_floor()):
 				#movement.x=500
 				movement.y= jumpforce
+				$SoundJump.play()
 				if(lifespan==1):
 					_animated_sprite.play("Stand")
 				if (lifespan ==2):
@@ -142,6 +143,7 @@ func nextToLeftWall2():
 	
 
 func hitCone():
+	$SoundHit.play()
 	print("workies")
 	_set_lifespan(-1)
 
@@ -162,5 +164,6 @@ func _on_Area2D_area_entered(area):
 		
 
 func _on_FallTracker_area_entered(area):
+	$SoundFall.play()
 	print(lifespan)
 	lifespan=0
