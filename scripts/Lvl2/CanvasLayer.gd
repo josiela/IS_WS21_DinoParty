@@ -50,7 +50,7 @@ func _physics_process(delta):
 		$xPartyHat.visible=true
 		$PartyHat.visible=true
 	if (entranceEnd >= 0):
-		$EntranceEnd.text = "00:20"
+		$EntranceEnd.text = "23:50"
 	else:
 		$EntranceEnd.text = "Admission is ending now"
 		

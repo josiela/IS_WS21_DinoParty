@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Graphics/FloorPiece150.png" type="Texture" id=5]
 [ext_resource path="res://Szenes/Collectables/PartyUtils.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Szenes/GroundElements/Ground.tscn" type="PackedScene" id=7]
@@ -30,19 +29,6 @@ position = Vector2( 418.862, 756.857 )
 
 [node name="PartyUtils2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2813.47, 479.791 )
-
-[node name="ScoreField" type="Label" parent="PartyUtils2"]
-margin_left = 30.49
-margin_top = -31.309
-margin_right = 436.49
-margin_bottom = 3.69101
-rect_pivot_offset = Vector2( 56.2754, 17.7166 )
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-3 Sek"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="PartyHat" parent="." instance=ExtResource( 9 )]
 position = Vector2( 4052.78, 321.651 )
@@ -77,19 +63,6 @@ position = Vector2( 8921.75, 730.359 )
 
 [node name="PartyUtils3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5581.26, 293.175 )
-
-[node name="ScoreField2" type="Label" parent="PartyUtils3"]
-margin_left = 34.1304
-margin_top = -13.392
-margin_right = 440.13
-margin_bottom = 21.608
-rect_pivot_offset = Vector2( -2998.62, 417.981 )
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-3 Sek"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TrafficCone2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 5442.18, 594.535 )
@@ -237,16 +210,3 @@ shape = SubResource( 1 )
 
 [node name="PartyUtils11" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1716.6, 629.581 )
-
-[node name="ScoreField3" type="Label" parent="PartyUtils11"]
-margin_left = 37.633
-margin_top = -30.339
-margin_right = 443.635
-margin_bottom = 4.66101
-rect_pivot_offset = Vector2( 56.2754, 17.7166 )
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-3 Sek"
-__meta__ = {
-"_edit_use_anchors_": false
-}

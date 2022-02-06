@@ -5,7 +5,7 @@ signal ralf_died()
 signal dontUpdateScorePlease()
 signal updateScorePlease()
 # Vars about Life 
-onready var lifespan = 1 setget _set_lifespan
+onready var lifespan = LevelState.life
 
 onready var _animated_sprite = $AnimatedSprite
 
@@ -31,6 +31,7 @@ func _ready():
 	Signals.connect("hitCone", self, "hitCone")
 	Signals.connect("collectedPartyHat", self, "collectedPartyHat")
 	Signals.connect("pickedUpCollectable", self, "pickedUpCollectable")
+	print("#####LIFE#####" + String(lifespan))
 
 func _physics_process(delta):
 	
@@ -114,12 +115,14 @@ func _physics_process(delta):
 		
 		#zum ändern der Lebensanzeige
 func _set_lifespan(variable):
-	if(lifespan<=3):					#wenn man das Leben verändern will muss man _set_lifespan(1) oder -1 angeben
+	if(lifespan<=4):					#wenn man das Leben verändern will muss man _set_lifespan(1) oder -1 angeben
 		lifespan+=variable
 		emit_signal("lifespan_updated", lifespan)
 
 func collectedPartyHat():
-	_set_lifespan(1)
+	print("#Lifespan: " + String(lifespan))
+	if lifespan <= 4:
+		_set_lifespan(1)
 	_animated_sprite.play("Hat")
 	print("The Hat is entered")
 
@@ -142,6 +145,7 @@ func nextToLeftWall2():
 func hitCone():
 	print("workies")
 	_set_lifespan(-1)
+	LevelState.life = 1
 
 func _on_Area2D_area_entered(area):
 	#read score var from /Canvaslayer and give it to highscore
@@ -149,15 +153,17 @@ func _on_Area2D_area_entered(area):
 	var calculatedScore = scoreCounter.get("scoreEasyShowable")
 	var score = scoreCounter.get("scoreEasy")
 	var highscore = get_node("/root/World")
-	LevelState.score = score
 	LevelState.hour = highscore.hour
-	highscore.setHighscore(score)
-	print(score)
-	if score <= 110:
+	LevelState.scoreLvl2 = calculatedScore
+	highscore.setHighscore(calculatedScore)
+	print("####SCORE#####")
+	print(calculatedScore)
+	if calculatedScore <= 50:
 		LevelState.level2solved = true
 	get_tree().change_scene("res://EndScreenLvl2.tscn")
 		
 
 func _on_FallTracker_area_entered(area):
 	print(lifespan)
+	LevelState.life = 1
 	lifespan=0

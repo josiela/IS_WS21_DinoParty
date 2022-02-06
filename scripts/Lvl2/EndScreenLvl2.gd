@@ -11,7 +11,7 @@ func _ready():
 		self.highscore = save_data.get_var()
 		save_data.close()
 		
-	$CenterContainer/VBoxContainer/CenterContainer4/score.text= "Score: " + String(LevelState.score) + " minutes"
+	$CenterContainer/VBoxContainer/CenterContainer4/score.text= "Score: " + String(LevelState.scoreLvl2) + " minutes"
 	$CenterContainer/VBoxContainer/CenterContainer3/highscore.text= "Highscore: " + String(highscore) + " minutes"
 	if LevelState.level2solved:
 		$CenterContainer/VBoxContainer/CenterContainer.visible=false

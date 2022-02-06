@@ -105,7 +105,7 @@ margin_bottom = 3.69101
 rect_pivot_offset = Vector2( 56.2754, 17.7166 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-3 Sek"
+text = "-3 min"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -130,6 +130,19 @@ position = Vector2( 5227.16, 549.872 )
 
 [node name="PartyHad" parent="." instance=ExtResource( 11 )]
 position = Vector2( 5681.08, 442.087 )
+
+[node name="ScoreField" type="Label" parent="PartyHad"]
+margin_left = 43.6521
+margin_top = -18.9684
+margin_right = 449.652
+margin_bottom = 16.0316
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "+1 life"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 7102.4, 717.301 )
@@ -177,7 +190,7 @@ margin_bottom = 18.1057
 rect_pivot_offset = Vector2( 56.2754, 17.7166 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-3 Sek"
+text = "-3 min"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -211,6 +224,19 @@ position = Vector2( 9458.38, 337.005 )
 
 [node name="PartyHad2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 9832.2, 315.413 )
+
+[node name="ScoreField" type="Label" parent="PartyHad2"]
+margin_left = 43.6521
+margin_top = -18.9684
+margin_right = 449.652
+margin_bottom = 16.0316
+rect_pivot_offset = Vector2( 56.2754, 17.7166 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "+1 life"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PU" parent="." instance=ExtResource( 8 )]
 position = Vector2( 9720.69, 547.974 )
@@ -353,9 +379,6 @@ position = Vector2( 16095.4, -98.9517 )
 [node name="TrafficCone17" parent="." instance=ExtResource( 9 )]
 position = Vector2( 16771.3, -101.485 )
 
-[node name="PartyUtils8" parent="." instance=ExtResource( 8 )]
-position = Vector2( 15845.4, 570.892 )
-
 [node name="PartyHad4" parent="." instance=ExtResource( 11 )]
 position = Vector2( 17141.4, 539.265 )
 
@@ -378,21 +401,8 @@ shape = SubResource( 4 )
 [node name="PartyUtils6" parent="." instance=ExtResource( 8 )]
 position = Vector2( 7550.31, 483.459 )
 
-[node name="ScoreField" type="Label" parent="PartyUtils6"]
-margin_left = 60.761
-margin_top = -31.309
-margin_right = 466.761
-margin_bottom = 3.69101
-rect_pivot_offset = Vector2( 56.2754, 17.7166 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "-3 Sek"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="JumpArrow" type="Sprite" parent="."]
-position = Vector2( 1825.24, 440.837 )
+position = Vector2( 1862.55, 489.344 )
 scale = Vector2( 0.732212, 0.732212 )
 texture = ExtResource( 7 )
 

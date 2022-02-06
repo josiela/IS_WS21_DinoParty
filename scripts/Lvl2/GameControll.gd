@@ -17,7 +17,6 @@ func _ready():
 		showablehighscore-=60
 	if(hour>24):
 		hour-=24
-	
 		
 	$ScoreCounter/highscore.text= "Best time " + String(hour)+":"+ String(showablehighscore) + " minutes"
 

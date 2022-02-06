@@ -18,6 +18,7 @@ func _ready():
 		$CenterContainer/VBoxContainer/CenterContainer.visible=false
 		$CenterContainer/VBoxContainer/CenterContainer2.visible=false
 	else:
+		LevelState.level1 = true
 		$CenterContainer/VBoxContainer/Level21.visible = false
 		$CenterContainer/VBoxContainer/Level22.visible = false
 		$CenterContainer/VBoxContainer/Level23.visible = false

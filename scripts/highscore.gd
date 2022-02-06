@@ -12,6 +12,7 @@ func _ready():
 	self.load_highscore()
 	# Highscore in Uhrzeit umrechnen
 	showablehighscore=highscore
+	LevelState.level2solved = false
 	while(showablehighscore>60):
 		hour+=1
 		showablehighscore-=60

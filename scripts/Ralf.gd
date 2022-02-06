@@ -31,6 +31,7 @@ func _ready():
 	Signals.connect("hitCone", self, "hitCone")
 	Signals.connect("collectedPartyHat", self, "collectedPartyHat")
 	Signals.connect("pickedUpCollectable", self, "pickedUpCollectable")
+	LevelState.life = 1
 
 func _physics_process(delta):
 	
@@ -107,22 +108,20 @@ func _physics_process(delta):
 		emit_signal("ralf_died")
 		_animated_sprite.play("Hit")
 		if Input.is_action_just_pressed("jump"):
-			if LevelState.level1:
-				get_tree().change_scene("res://ParallaxTestScene.tscn")
-			else:
-				get_tree().change_scene("res://Level2Scene.tscn")
+			get_tree().change_scene("res://ParallaxTestScene.tscn")
 			
 	
 
 		
 		#zum ändern der Lebensanzeige
 func _set_lifespan(variable):
-	if(lifespan<=3):					#wenn man das Leben verändern will muss man _set_lifespan(1) oder -1 angeben
+	if(lifespan<=4):					#wenn man das Leben verändern will muss man _set_lifespan(1) oder -1 angeben
 		lifespan+=variable
 		emit_signal("lifespan_updated", lifespan)
 
 func collectedPartyHat():
-	_set_lifespan(1)
+	if lifespan <= 4:
+		_set_lifespan(1)
 	_animated_sprite.play("Hat")
 	print("The Hat is entered")
 
@@ -152,6 +151,7 @@ func _on_Area2D_area_entered(area):
 	var score = scoreCounter.get("scoreEasyShowable")
 	var highscore = get_node("/root/World")
 	LevelState.score = score
+	LevelState.life = lifespan
 	highscore.setHighscore(score)
 	if score <= 48:
 		LevelState.level1 = false
