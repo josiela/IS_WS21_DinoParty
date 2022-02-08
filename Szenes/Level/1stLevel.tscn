@@ -427,7 +427,7 @@ script = ExtResource( 6 )
 endScreen_path = "res://EndScreen.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -260.707, 295.167 )
+position = Vector2( -104.192, 311.276 )
 z_index = 1
 shape = SubResource( 5 )
 
@@ -453,3 +453,8 @@ position = Vector2( 17976.8, 549.767 )
 
 [node name="PartyUtils9" parent="." instance=ExtResource( 8 )]
 position = Vector2( 16427.8, -234.322 )
+
+[node name="Ground13" parent="." instance=ExtResource( 10 )]
+position = Vector2( 19967.4, 718.505 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

@@ -159,14 +159,13 @@ func _on_Area2D_area_entered(area):
 	LevelState.hour = highscore.hour
 	LevelState.scoreLvl2 = calculatedScore
 	highscore.setHighscore(calculatedScore)
-	print("####SCORE#####")
-	print(calculatedScore)
 	if calculatedScore <= 50:
 		LevelState.level2solved = true
 	get_tree().change_scene("res://EndScreenLvl2.tscn")
 		
 
 func _on_FallTracker_area_entered(area):
+	$SoundFall.play()
 	print(lifespan)
 	LevelState.life = 1
 	lifespan=0

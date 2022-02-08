@@ -31,6 +31,7 @@ func _ready():
 	Signals.connect("hitCone", self, "hitCone")
 	Signals.connect("collectedPartyHat", self, "collectedPartyHat")
 	Signals.connect("pickedUpCollectable", self, "pickedUpCollectable")
+	Signals.connect("enteredSubway", self, "enteredSubway")
 	LevelState.life = 1
 
 func _physics_process(delta):
@@ -147,7 +148,7 @@ func hitCone():
 	print("workies")
 	_set_lifespan(-1)
 
-func _on_Area2D_area_entered(area):
+func enteredSubway():
 	#read score var from /Canvaslayer and give it to highscore
 	var scoreCounter = get_node("/root/World/ScoreCounter/")
 	var score = scoreCounter.get("scoreEasyShowable")

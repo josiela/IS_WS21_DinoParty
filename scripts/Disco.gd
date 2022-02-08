@@ -14,9 +14,8 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	print("hit goal")
-	print("Hier ist der Score (Disco-Script)")
-	print(score)
+	if body.name == "Ralf":
+		Signals.emit_signal("enteredSubway")
 	#if get_tree().change_scene(endScreen_path) != OK:
 		# Error handling
 		#print("Error: Unavailable endszene")
